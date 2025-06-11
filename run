@@ -1,0 +1,8 @@
+./hao --q 0.4 --alpha_in_degrees 22.5 --Initial_value_for_theta_eq -4.80 --ds_default 1.0e-3 > RESLT/output
+
+./hao --q 0.4 --alpha_in_degrees 22.5 --Initial_value_for_theta_eq -4.80 --ds_default 1.0e-3 --interval1_start 0.0 --interval1_end 0.001 --ds_interval1 1.0e-4 > RESLT/output
+
+
+replot "RESLT/trace.dat" every ::1680::1700 using 1:3 with p
+plot "RESLT/trace.dat" u 1:3 w l
+
