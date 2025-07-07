@@ -1,0 +1,779 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[title]{appendix}
+\usepackage{listings,amsmath,amssymb,xcolor,graphicx,url,natbib}
+\usepackage{amsfonts}
+\usepackage[inner=3cm,outer=3cm,top=3cm,bottom=3cm]{geometry}
+\definecolor{lgrey}{HTML}{808080}
+\definecolor{dgrey}{HTML}{404040}
+\usepackage[framed,numbered,autolinebreaks,useliterate]{mcode}
+\usepackage{cases}
+\usepackage{color}
+\usepackage{bm}
+\bibliographystyle{abbrv}
+\usepackage{array}
+\usepackage{subfigure}
+
+
+% \inline is a custom macro
+\def\inline{\lstinline[basicstyle=\ttfamily]}
+
+% \includecode is a custom macro
+% usage is:
+% \includecode{title}{filename}
+% where 'title' is the displayed title of the file (usually its name)
+%   and 'filename' is the full filename, including the path relative to the LaTeX document
+% See example below in the appendix
+\newcommand{\includecode}[2]{\subsection{\lstinline[basicstyle=\ttfamily\large]{#1}}\lstinputlisting{#2}}
+
+
+
+% Document title: uncomment the appropriate title
+\title{Summery}
+%\title{Coursework 2}
+%\title{Coursework 3}
+%\title{Project 1: (Project name)} % add the name of the project
+%\title{Project 2: (Project name)} % add the name of the project
+
+\author{Hao Ye} % your student number here
+%\date{2023.4.20}
+
+
+\begin{document}
+\maketitle
+%% Document body starts here
+
+\chapter{Theoretical Framework}
+
+\section{Fluid-solid interaction}
+Generally speaking, we will investigate a two-dimensional problem concerning the deformation and motion of a slender elastic particle in shear flow at a low Reynolds number, focussing on the particle's orientation and trajectory when it reaches equilibrium in the fluid. As this project concerns both fluid and solid mechanics, we will introduce these two components separately and then couple them to discuss the fluid-solid interaction.
+\subsection{Fluid mechanics}
+We set the undeformed slender elastic particle clamped at the origin of the laboratory reference frame $\{\mathbf{e'_1}, \mathbf{e'_2}, \mathbf{e'_3}\}$ as
+$\mathbf{r}_0^*(\xi^*)=(0,\xi^*)^T$, where $\xi^*\in [0,\mathcal{L}]$. We then assume that its deformed state is given by $\mathbf{R}_0^*(\xi^*,t^*)$. 
+Final position of the deformed particle after translation and rotation is determined as follows:
+\begin{equation}
+	\label{eqn:19}
+	\mathbf{R}^*(\xi^*,t^*)=\bm{\mathcal{R}}\,\mathbf{R}_0^*(\xi^*,t^*)+\mathbf{r}_b^*(t^*),
+\end{equation}
+where $\bm{\mathcal{R}}=\left(\begin{aligned}
+	&\cos(\phi(t^*))\quad -\sin(\phi(t^*)) \\
+	&\sin(\phi(t^*))\quad \cos(\phi(t^*))
+\end{aligned}\right)$ is the rotation matrix with $\phi(t^*)$ which measures the particle's inclination as shown in Figure \ref{fig:5}, and $\textbf{r}_b^*(t^*)=\left(\begin{aligned}
+&X(t^*) \\
+&Y(t^*)
+\end{aligned}\right)$ represents the translation of the particle. Note that inclination $\phi(t^*)$ refers to the actual rotational angle of the object. From Figure \ref{fig:5}, we can easily derive the relationship between orientation and inclination as follows:
+\begin{equation}
+	\label{eqn:20}
+	\theta(t^*)=\frac{\pi}{2}-\phi(t^*).
+\end{equation}
+\begin{figure}[htb]
+	\begin{center}
+		% specify width as 80% of the width of the text on the page
+		% we can also specify a width in centimetres, e.g. [width=8cm]
+		\includegraphics[width=0.8\textwidth]{plot/fluid_general.png}
+		\caption{Schematic of a slender elastic particle in the deformed state in shear flow. The dashed black line represents its undeformed configuration.}
+		\label{fig:5}
+	\end{center}
+	%	\setlength{\abovecaptionskip}{-0.5 cm}
+\end{figure}
+Since we consider a slender elastic particle immersed in shear flow, the velocity of the background flow is given by
+\begin{equation}
+	\label{eqn:21}
+	\mathbf{U}^{\infty*}(\mathbf{R}^*(\xi^*,t^*))=\dot{\gamma}\left(\mathbf{R}^*(\xi^*,t^*)\cdot\mathbf{e}_y\right)\cdot\mathbf{e}_x,
+\end{equation}
+where $\mathbf{e}_x=(1,0)^T$ and $\mathbf{e}_y=(0,1)^T$ are both unit vectors. Then, the particle's velocity from kinematics is 
+\begin{equation}
+	\label{eqn:22}
+	\mathbf{U}^*=\frac{\partial\mathbf{R}^*(\xi^*,t^*)}{\partial t^*}.
+\end{equation}
+Let us define a tangential vector to surface of the particle:
+\begin{equation}
+	\label{eqn:23}
+	\mathbf{e}_t=\frac{1}{|\frac{\partial\mathbf{R}^*(\xi^*,t^*)}{\partial\xi^*}|}\frac{\partial\mathbf{R}^*(\xi^*,t^*)}{\partial\xi^*}.
+\end{equation}
+From the slender body theory, the traction is obtained as flows:
+\begin{equation}
+	\label{eqn:24}
+	\mathbf{f}^*=c_\perp\left(\mathbf{I}-\frac{1}{2}\mathbf{e}_t\mathbf{e}_t\right)\cdot(\mathbf{U}^{\infty*}-\mathbf{U}^*),
+\end{equation}
+where $c_\perp=\frac{4\pi\mu}{\ln{\frac{1}{\epsilon}}}$ is the drag coefficient. 
+
+We non-dimensionalise the variables mentioned in this section using the following basic relationships (we set the total length
+of the particle as the characteristic length $\mathcal{L}$ and define the time scale as $\frac{1}{\dot{\gamma}}$ , where $\dot{\gamma}$ is the shear rate.) :
+\begin{equation}
+	\label{eqn:25}
+	\xi^*=\mathcal{L}\xi, \quad t^*=\frac{1}{\dot{\gamma}}\,t.
+\end{equation}
+Note that the non-dimensional variables are identified without asterisks.
+Hence, the relationship between dimensional and non-dimensional variables are given by
+\begin{equation}
+	\label{eqn:26}
+	(\mathbf{r}_0^*, \mathbf{r}_b^*, \mathbf{R}_0^*, \mathbf{R}^*)^T=\mathcal{L}\cdot(\mathbf{r}_0, \mathbf{r}_b, \mathbf{R}_0, \mathbf{R})^T,
+\end{equation}
+\begin{equation}
+	\label{eqn:27}
+	\mathbf{U}^{\infty*}=\mathcal{L}\dot{\gamma}\mathbf{U}^{\infty}, \quad \mathbf{U}^*=\mathcal{L}\dot{\gamma}\mathbf{U},
+\end{equation}
+\begin{equation}
+	\label{eqn:28}
+	\mathbf{f}^*=c_\perp\,\mathcal{L}\,\dot{\gamma}\,\left(\mathbf{I}-\frac{1}{2}\mathbf{e}_t\mathbf{e}_t\right)\cdot(\mathbf{U}^{\infty}-\mathbf{U})=c_\perp\,\mathcal{L}\,\dot{\gamma}\,\mathbf{f}_{f},
+\end{equation}
+where 
+\begin{equation}
+	\label{eqn:101}
+	\begin{aligned}
+	\mathbf{f}_f=&\left(\mathbf{I}-\frac{1}{2}\mathbf{e}_t\mathbf{e}_t\right)\cdot(\mathbf{U}^{\infty}(t)-\mathbf{U}(t))\\
+	=&\left(\mathbf{I}-\frac{1}{2}\mathbf{e}_t\mathbf{e}_t\right)\cdot\Big((\bm{\bm{R}}(\xi,t)\cdot\textbf{e}_y)\cdot\textbf{e}_x-\frac{\partial\textbf{R}(\xi,t)}{\partial t}\Big)
+	\end{aligned}
+\end{equation}
+is the non-dimensional fluid traction. 
+
+
+
+
+\subsection{Solid mechanics}
+We are considering the fluid-solid interaction, so next we will focus on the part related to solid mechanics. This report employs geometrically nonlinear Kirchhoff-Love beam theory with incrementally linear constitutive equations to describe the deformation issues of elastic beams subjected to forces in fluid. We define the deformation of the beam as the dimensionless centreline displacement, $\bm{\omega} = \frac{\bm{\omega}^*}{\mathcal{L}}$. The position of a material point on the beam's centerline is denoted by 
+\begin{equation}
+	\label{eqn:61}
+	\mathbf{r}_0(\xi^1, \xi^2=0)=\mathbf{r}^0_0(\xi^1),\quad \xi^1\in [0,1].
+\end{equation}
+Then the position of an arbitrary point in the undeformed beam is given by 
+\begin{equation}
+	\label{eqn:62}
+	\mathbf{r}_0(\xi^1, \xi^2)=\mathbf{r}^0_0(\xi^1)+\xi^2\mathbf{n},\quad \xi^2\in [-\frac{h}{2},\frac{h}{2}],
+\end{equation}
+where $\mathbf{n}=(1,0)^T$ is the normal vector to the undeformed centerline, and $\frac{h}{2}=\frac{h^*}{2\mathcal{L}}$ is the non-dimensional radius of the cross section of the beam. After the deformation, the previous position $\mathbf{r}^0_0(\xi^1)$ in the undeformed reference configuration is transformed to a new position 
+\begin{equation}
+	\label{eqn:63}
+	\mathbf{R}^0_0(\xi^1)=\mathbf{r}^0_0(\xi^1)+\bm{\omega}(\xi^1).
+\end{equation}
+We decompose the displacement $\bm{\omega}$ into the undeformed basis:
+\begin{equation}
+	\label{eqn:64}
+	\bm{\omega}=\omega^1\mathbf{a}_1+\omega^2\mathbf{a}_2,
+\end{equation}
+where $\mathbf{a}_1=\frac{\partial \mathbf{r}^0_0}{\partial\xi^1}$ and $\mathbf{a}_3=\mathbf{n}$. The Kirchhoff-Love assumption states that material lines, which were normal to the undeformed centreline, remain normal to the deformed centreline and remain unstretched. Therefore, an arbitrary material point $\mathbf{r}_0$ after deformation is given by 
+\begin{equation}
+	\label{eqn:65}
+	\mathbf{R}_0(\xi^1,\xi^2)=\mathbf{R}^0_0(\xi^1)+\xi^2\mathbf{N},
+\end{equation}
+where $\mathbf{N}$ is the normal to the deformed configuration.
+
+We then give the non-dimensional equation by scaling the stresses and the applied traction on the beam's bending stiffness:
+\begin{equation}
+	\label{eqn:30}
+	\left(\begin{aligned}
+		&\mathbf{f^*} \\
+		&\mathbf{\sigma}_0^*
+	\end{aligned}\right)
+	=\kappa\left(\begin{aligned}
+		&\textbf{f}_{s} \\
+		&\mathbf{\sigma}_0
+	\end{aligned}\right),
+\end{equation}
+where $\textbf{f}_{s}$ is the non-dimensional solid traction and $\sigma^*_0$ indicates the prestress of the elastic beam.
+The non-dimensional form of the principle of virtual displacements that governs the beams deformation is then given by
+\begin{equation}
+	\label{eqn:31}
+	\int^1_0 \left[(\sigma_0+\gamma)\delta\gamma+\frac{1}{12}h^2\kappa\delta\kappa-\frac{1}{h}\sqrt{\frac{A}{a}}\,\textbf{f}_{s}\cdot \delta \textbf{R}_0
+	\right]\,\sqrt{a}\,d\xi=0,
+\end{equation}
+where 
+\begin{equation}
+	\label{eqn:32} a=\frac{\partial\textbf{r}_0}{\partial\xi}\cdot\frac{\partial\textbf{r}_0}{\partial\xi}, A=\frac{\partial\textbf{R}_0}{\partial\xi}\cdot\frac{\partial\textbf{R}_0}{\partial\xi}
+\end{equation}
+denote the squares of the lengths of infinitesimal material line elements in the undeformed and deformed configurations, respectively.
+Also, considering undeformed and deformed ones, we have 
+\begin{equation}
+	\label{eqn:33}
+	ds=\sqrt{a}\,d\xi,\,dS=\sqrt{A}\,d\xi.
+\end{equation}
+$A$ and $a$ could be understood as the "$1\times1$ metric tensors" of the beam's centerline, representing the deformed and undeformed configurations, respectively. 
+The ratio $\sqrt{\frac{A}{a}}$ signifies the "extension ratio" or "stretch" of the beam's centerline. We define the curvature of the beam's centerline prior to and following deformation as represented by 
+\begin{equation}
+	\label{eqn:34}
+	b=\textbf{n}\cdot\frac{d^2\textbf{r}_0}{d\xi^2},\,B=\textbf{N}\cdot\frac{\partial^2\textbf{R}_0}{\partial\xi^2}.
+\end{equation}
+The "$1\times1$" strain and bending "tensors" $\gamma$ and $\kappa$ are obtained by
+\begin{equation}
+	\label{eqn:35}
+	\gamma=\frac{1}{2}(A-a),\,\kappa=-(B-b).
+\end{equation}
+
+Since the elastic beam is initially clamped at the origin, the boundary conditions are
+\begin{equation}
+	\label{eqn:58}
+	\begin{aligned}
+	&\mathbf{R}_0(\xi=0)\cdot\mathbf{e}_x=0,\\
+	&\mathbf{R}_0(\xi=0)\cdot\mathbf{e}_y=0,\\
+	&\frac{d\left(\mathbf{R}_0(\xi=0)\cdot\mathbf{e}_x\right)}{d\xi}=0.
+	\end{aligned}
+\end{equation}
+
+\subsection{Fluid–solid coupling}
+The no-slip boundary condition requires that the velocity of the fluid on the surface of the beam matches the velocity of the beam at that location. Hence, the boundary condition is 
+\begin{equation}
+	\label{eqn:100}
+	\mathbf{u}=\frac{\partial \mathbf{R}(\xi,t)}{\partial t}.
+\end{equation}
+
+Recall that in $\eqref{eqn:28}$, we use slender body theory to evaluate the traction exerted by the fluid on the beam as
+\begin{equation}
+	\label{eqn:102}
+	\mathbf{f}^*=c_\perp\,\mathcal{L}\,\dot{\gamma}\,\mathbf{f}_{f}.
+\end{equation}
+From \eqref{eqn:30}, the applied traction on beam is 
+\begin{equation}
+	\label{eqn:103}
+	\mathbf{f}^*=K\,\mathbf{f}_{s}.
+\end{equation}
+Hence, the fluid applies traction to the beam, and the loading term in the solid equation \eqref{eqn:31} are expressed by
+\begin{equation}
+	\label{eqn:37}
+	\textbf{f}_{s}=\frac{c_\perp\,\mathcal{L}\,\dot{\gamma}}{K}\,\textbf{f}_{f}.
+\end{equation}
+Then, we define the coefficient in \eqref{eqn:37} as $\mathcal{I}$, which represents the fluid-solid interaction parameter (FSI parameter) and is expressed as:
+\begin{equation}
+	\label{eqn:38}
+	\mathcal{I}=\frac{c_\perp\,\mathcal{L}\,\dot{\gamma}}{K}.
+\end{equation}
+It quantifies the degree or strength of the interaction between the fluid and the solid within the system.
+
+
+
+
+\section{Governing equations}
+Initially, the elastic beam is clamped at the origin, denoted by $\textbf{r}_0(\xi)=(0,\xi)^T,\,\xi\in [0,1]$. Next, a traction $\mathbf{f}_s=\mathcal{I}\,\textbf{f}_0$  is applied to it, causing deformation denoted as $\textbf{R}_0(\xi,t)$. Substituting 
+$\textbf{r}_0(\xi), \textbf{f}_s$ and $\textbf{R}_0(\xi,t)$ into the beam's governing equation $\eqref{eqn:31}$, we obtain the following equation:
+\begin{equation}
+	\label{eqn:48}
+	\bm{\mathcal{S}}\Big(\textbf{R}_0(\xi,t);\textbf{f}_0,\textbf{r}_0(\xi)\Big)=0,
+\end{equation}
+where $\textbf{R}_0(\xi,t)$ is the unknown and $\bm{\mathcal{S}}(\cdot)$ indicates the left hand side of $\eqref{eqn:31}$.
+Subsequently, according to $\eqref{eqn:19}$, a translation and rotation are applied to 
+$\textbf{R}_0(\xi,t)$, yielding $\textbf{R}(\xi,t)$ as:
+\begin{equation}
+	\label{eqn:49}
+	\textbf{R}(\xi,t)=\bm{\mathcal{R}}(t)\,\textbf{R}_0(\xi,t)+\textbf{r}_b(t).
+\end{equation}
+ We compute the fluid traction $\textbf{f}_f$ acting on the beam $\textbf{R}(\xi,t)$ based on $\eqref{eqn:101}$. Then, we rotate this fluid traction $\textbf{f}_f$ back by angle $\phi(t)$ while keeping its magnitude unchanged, obtaining traction $\textbf{f}_0$. Hence, the relationship between $\textbf{f}_0$ and $\textbf{f}_f$ is 
+\begin{equation}
+	\label{eqn:50}
+	\textbf{f}_0=\bm{\mathcal{R}}^{-1}\,\textbf{f}_f,
+\end{equation}
+where $\bm{\mathcal{R}}^{-1}$ is the inverse of the rotation matrix. Then, the solid traction, which serves as the loading term in the beam equation, is represented as 
+\begin{equation}
+	\label{eqn:67}
+	\textbf{f}_s=\mathcal{I}\,\textbf{f}_0=\mathcal{I}\,\left(\bm{\mathcal{R}}^{-1}\,\textbf{f}_f\right).
+\end{equation}
+Then $\eqref{eqn:48}$ can be updated by
+\begin{equation}
+	\label{eqn:51}
+	\bm{\mathcal{S}}\Big(\textbf{R}_0(\xi,t), X(t), Y(t),\phi(t);\textbf{r}_0(\xi)\Big)=0.
+\end{equation}
+Note that $\textbf{r}_0(\xi)=(0,\xi)^T,\,\xi\in [0,1]$ is not the unknown in this equation.
+
+The net drag and net torque acting on the beam $\textbf{R}(t,\xi)$ in non-dimensional form are 
+\begin{equation}
+	\label{eqn:52}
+	\textbf{F}=\int^1_0 \textbf{f}\, \left|\frac{\partial\textbf{R}}{\partial\xi}\right|\,d\xi, 
+\end{equation}
+\begin{equation}
+	\label{eqn:53}
+	\mathbf{T}\cdot\textbf{e}_z=\left\{\int^1_0 \left[(\textbf{R}-\textbf{R}_{centre})\times \textbf{f}\,\right]\,\left|\frac{\partial\textbf{R}}{\partial\xi}\right|\,d\xi\right\}\cdot\textbf{e}_z,
+\end{equation}
+where 
+\begin{equation}
+	\label{eqn:54}
+	\textbf{R}_{centre}=\int^1_0 \textbf{R}\,\left|\frac{\partial\textbf{R}}{\partial\xi}\right|\,d\xi
+\end{equation}
+represents the position of centre of mass. Under the Stokes flow regime, both the fluid and the immersed particle are assumed to have negligible inertia. As a result, there is no temporal accumulation of momentum, and the system must satisfy the equilibrium conditions at every time instant. Since we assume that there is no external body force, thus the system must satisfy the conditions of drag-free and torque-free. Hence, we have 
+\begin{equation}
+	\label{eqn:55}
+	\textbf{F}\,\Big(\textbf{R}_0(\xi,t), X(t), Y(t), \phi(t)\Big)=\textbf{0},
+\end{equation}
+\begin{equation}
+	\label{eqn:56}
+	\{\mathbf{T}\cdot\textbf{e}_z\}\,\Big(\textbf{R}_0(\xi,t), X(t), Y(t), \phi(t)\Big)=0.
+\end{equation} 
+Combining $\eqref{eqn:51}, \eqref{eqn:55}$ and $\eqref{eqn:56}$, we collect the following equations for unkonwns:
+\begin{equation}
+	\label{eqn:57}
+	\left\{\begin{aligned}
+		&\bm{\mathcal{S}}\Big(\textbf{R}_0(\xi,t), X(t), Y(t),\phi(t);\textbf{r}_0(\xi)\Big)=0\\
+		&\textbf{F}\,\Big(\textbf{R}_0(\xi,t), X(t), Y(t),\phi(t)\Big)=\textbf{0}\\
+		&\{\mathbf{T}\cdot\textbf{e}_z\}\,\Big(\textbf{R}_0(\xi,t), X(t), Y(t),\phi(t)\Big)=0
+	\end{aligned}\right.\Longrightarrow \Big(\textbf{R}_0(\xi,t), X(t), Y(t),\phi(t)\Big).
+\end{equation}
+
+\section{Equilibrium governing equations}
+
+We are particularly interested in the equilibrium solutions of an elastic particle in shear flow, rather than the trivial tumbling state. 
+
+\subsection{Solutions with constant orientations}
+From the rigid particle case, we assume that an elastic particle will also undergo a fixed orientation with a uniform drift when the particle reaches equilibrium. Hence, it is worth studying further the solutions with constant orientations (Namely, from \eqref{eqn:20}, we seek the steady solution for inclination $\phi(t)$, $\dot{\phi}(t)=0$), hence the following conditions are made:
+\begin{equation}
+	\label{eqn:39}
+	\overline{\phi(t)}=\phi_{eq},\, \overline{\textbf{R}_0(\xi,t)}=\textbf{R}_0(\xi).
+\end{equation}
+Note that variables with an overbar denote their base state. Thus, from \eqref{eqn:19} we obtain the following expressions in non-dimensional form with the conditions above:
+\begin{equation}
+	\label{eqn:40}
+	\overline{\textbf{R}(\xi,t)}=\overline{\bm{\mathcal{R}}}\,\textbf{R}_0(\xi)+\overline{\textbf{r}_b(t)},
+\end{equation}
+where $\overline{\bm{\mathcal{R}}}=\left(\begin{aligned}
+	&\cos(\phi_{eq})\quad -\sin((\phi_{eq}) \\
+	&\sin((\phi_{eq})\quad \cos((\phi_{eq})
+\end{aligned}\right) $ is the rotation matrix. We define $\overline{\textbf{r}_b(t)}=\left(\begin{aligned}
+	&\overline{X(t)} \\
+	&\overline{Y(t)}
+\end{aligned}\right)$, and derive the following few non-dimensional formulas:
+\begin{equation}
+	\label{eqn:41}
+	\textbf{U}^{\infty}=\left(\overline{\textbf{R}(\xi,t)}\cdot\textbf{e}_y\right)\cdot\textbf{e}_x=\left(\Big(\overline{\bm{\mathcal{R}}}\,\textbf{R}_0(\xi)+\overline{\textbf{r}_b(t)}\Big)\cdot\textbf{e}_y\right)\cdot\textbf{e}_x.
+\end{equation}
+\begin{equation}
+	\label{eqn:42}
+	\textbf{U}=\frac{\partial\overline{\textbf{R}(\xi,t)}}{\partial t}=\dot{\overline{\textbf{r}_b(t)}}=\left(\begin{aligned}
+		&\dot{\overline{X(t)}} \\
+		&\dot{\overline{Y(t)}}
+	\end{aligned}\right).
+\end{equation}
+\begin{equation}
+	\label{eqn:43}
+	\textbf{e}_t(\xi)=\frac{1}{|\frac{\partial\overline{\textbf{R}(\xi,t)}}{\partial\xi}|}\frac{\partial\overline{\textbf{R}(\xi,t)}}{\partial\xi}.
+\end{equation}
+\begin{equation}
+	\label{eqn:44}
+	\textbf{f}_{f}=\left(\mathbf{I}-\frac{1}{2}\textbf{e}_t\textbf{e}_t\right)\cdot(\textbf{U}^{\infty}-\textbf{U}).
+\end{equation}
+From $\eqref{eqn:44}$, it can be observed that the term $\left(\mathbf{I}-\frac{1}{2}\textbf{e}_t\textbf{e}_t\right)$ is independent of time $t$. We can just analyze $(\textbf{U}^{\infty}-\textbf{U})$ to determine whether the $\textbf{f}_{f}$ is the function of time $t$ or not. Hence, we have 
+\begin{equation}
+	\label{eqn:45}
+	\begin{aligned}
+		\textbf{U}^{\infty}-\textbf{U}&=\left(\Big(\overline{\bm{\mathcal{R}}}\,\textbf{R}_0(\xi)+\overline{\textbf{r}_b(t)}\Big)\cdot\textbf{e}_y\right)\cdot\textbf{e}_x-\dot{\overline{\textbf{r}_b(t)}}\\
+		&=\left((\overline{\bm{\mathcal{R}}}\,\overline{\textbf{R}_0(\xi)})\cdot\textbf{e}_y\right)\cdot\textbf{e}_x+(\overline{\textbf{r}_b(t)}\cdot\textbf{e}_y)\cdot\textbf{e}_x-\dot{\overline{\textbf{r}_b(t)}}\\
+		&=\left((\overline{\bm{\mathcal{R}}}\,\overline{\textbf{R}_0(\xi)})\cdot\textbf{e}_y\right)\cdot\textbf{e}_x+\left(\begin{aligned}
+			\overline{Y(t)}\\
+			0
+		\end{aligned}\right)-\left(\begin{aligned}
+			&\dot{\overline{X(t)}} \\
+			&\dot{\overline{Y(t)}}
+		\end{aligned}\right).
+	\end{aligned}
+\end{equation}
+From the last step of $\eqref{eqn:45}$, it is obvious that $\left((\overline{\bm{\mathcal{R}}}\,\overline{\textbf{R}_0(\xi)})\cdot\textbf{e}_y\right)\cdot\textbf{e}_x$ is independent of time $t$. Thus, if 
+\begin{equation}
+	\label{eqn:46}
+	\left(\begin{aligned}
+		\overline{Y(t)}\\
+		0
+	\end{aligned}\right)-\left(\begin{aligned}
+		&\dot{\overline{X(t)}} \\
+	    &\dot{\overline{Y(t)}}
+	\end{aligned}\right)=\textbf{0},
+\end{equation}
+then $(\textbf{U}^{\infty}-\textbf{U})$ is independent of time $t$, implying that $\textbf{f}_{f}$ is also independent of $t$.
+Considering $\eqref{eqn:46}$, we derive the non-dimensional specific expression for $\overline{\textbf{r}_b(t)}$ as follows:
+\begin{equation}
+	\label{eqn:47}
+	\overline{\textbf{r}_b(t)}=\left(\begin{aligned}
+		\overline{X(t)}\\
+		\overline{Y(t)}
+	\end{aligned}\right)=\left(\begin{aligned}
+		\frac{1}{2}V t^2+&Ut+X_0\\
+		Vt&+Y_0
+	\end{aligned}\right),
+\end{equation}
+where $V$ represents the vertical drift speed and the change rate  of horizontal motion, while $U$ denotes the initial horizontal speed. $(X_0, Y_0)$ is the initial position of the hinge point.
+
+ From the mathematical derivation above, we observe that if $\eqref{eqn:47}$ holds, the fluid traction $\textbf{f}_{f}$ is steady (independent of time $t$). This aligns with the previously established condition $\overline{\textbf{R}_0(\xi,t)}=\textbf{R}_0(\xi)$. Consequently, it turns out that conditions $\eqref{eqn:39}$ are reasonable, and the entire deduction is self-consistent.
+
+\subsection{Equilibrium equations}
+Since the elastic particles reach equilibrium, they continue to satisfy the drag-free and torque-free conditions, with the variables corresponding to their base state. Hence, we can obtain the expressions based on $\eqref{eqn:55}$ and $\eqref{eqn:56}$:
+\begin{equation}
+	\label{eqn:120}
+	\textbf{F}\,(\textbf{R}_0(\xi), V, U, \phi_{eq})=\textbf{0},
+\end{equation}
+\begin{equation}
+	\label{eqn:121}
+	\{\mathbf{T}\cdot\textbf{e}_z\}\,(\textbf{R}_0(\xi), V, U, \phi_{eq})=0.
+\end{equation}
+Since the fluid traction is time-independent, the net drag and net torque remain unchanged over time. Then, we can have a set of equilibrium equations:
+\begin{equation}
+	\label{eqn:122}
+	\left\{\begin{aligned}
+		&\bm{\mathcal{S}}\left(\textbf{R}_0(\xi), V, U,\phi_{eq};\textbf{r}_0(\xi)\right)=0\\
+		&\textbf{F}\,(\textbf{R}_0(\xi), V, U, \phi_{eq})=\textbf{0}\\
+		&\{\mathbf{T}\cdot\textbf{e}_z\}\,(\textbf{R}_0(\xi), V, U, \phi_{eq})=0
+	\end{aligned}\right.\Longrightarrow \left(\textbf{R}_0(\xi), V, U, \phi_{eq}\right).
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Linear stability}
+To facilitate the analysis of the equations, we recall the expressions of solid traction \eqref{eqn:67} here:
+\begin{equation}
+	\label{eqn:104}
+		\textbf{f}_s=\mathcal{I}\,\left(\bm{\mathcal{R}}^{-1}\,\textbf{f}_f\right),
+\end{equation}
+where fluid traction from the slender body theory is 
+\begin{equation}
+	\label{eqn:105}
+	\begin{aligned}
+		\textbf{f}_f=&\left(\mathbf{I}-\frac{1}{2}\mathbf{e}_t\mathbf{e}_t\right)\cdot(\mathbf{U}^{\infty}(t)-\mathbf{U}(t))\\
+		=&\left(\mathbf{I}-\frac{1}{2}\mathbf{e}_t\mathbf{e}_t\right)\cdot\Big((\bm{\bm{R}}(\xi,t)\cdot\textbf{e}_y)\cdot\textbf{e}_x-\frac{\partial\textbf{R}(\xi,t)}{\partial t}\Big),
+	\end{aligned}
+\end{equation}
+$\mathcal{I}$ is the FSI parameter and  $\bm{\mathcal{R}}^{-1}=\left(\begin{aligned}
+	&\cos(\phi(t))\quad \sin(\phi(t)) \\
+	&-\sin(\phi(t))\quad \cos(\phi(t))
+\end{aligned}\right)$ is the inverse of rotation matrix with $\phi(t)$ which measures the particle's inclination as shown in Figure \ref{fig:5}. We also remind that 
+\begin{equation}
+	\textbf{R}(\xi,t)=\bm{\mathcal{R}}\,\textbf{R}_0(\xi,t)+\textbf{r}_b(t),
+\end{equation}
+where $\bm{\mathcal{R}}=\left(\begin{aligned}
+	&\cos(\phi(t))\quad -\sin(\phi(t)) \\
+	&\sin(\phi(t))\quad \cos(\phi(t))
+\end{aligned}\right)$ is the rotation matrix and $\bm{r}_b(t)=\left(\begin{aligned}
+&X(t) \\
+&Y(t)
+\end{aligned}\right)$ is the base vector indicating translation.
+Then, the implicit expression of beam equation is 
+\begin{equation}
+	\label{eqn:106}
+	\bm{\mathcal{S}}\Big(\textbf{R}_0(\xi,t),\textbf{f}_s;\textbf{r}_0(\xi)\Big)=0.
+\end{equation}
+From these expressions above, we find that the three motion unknowns, $X(t), Y(t)$ and $\phi(t)$, along with their time derivatives,  $\frac{dX}{dt}, \frac{dY}{dt}$ and $\frac{d\phi}{dt}$, arise solely from the solid traction in the beam equation, namely 	
+\begin{equation}
+	\label{eqn:107}
+\bm{\mathcal{S}}\Big\{\textbf{R}_0(\xi,t),\textbf{f}_s\Big(X(t), Y(t),\phi(t),\frac{dX}{dt}, \frac{dY}{dt},\frac{d\phi}{dt}\Big);\textbf{r}_0(\xi)\Big\}=0.
+\end{equation}
+
+Since we use the finite element method to solve the equations, $\textbf{R}_0(\xi,t)$ has been discretised as the Galerkin solution. In the $e$-th element, we have
+\begin{equation}
+	\label{eqn:108}
+R_0^{i,[e]}=R_{ijk}^{[e]}(t)\, \psi_{jk}(s),
+\end{equation}
+where $R_{ij1}^{[e]}$ represents the $i$-th coordinate of the local node $j$ and $R_{ij2}^{[e]}$ represents the derivative of $i$-th coordinate with respect to local variable $s$, evaluated at the node local $j$.
+
+We set the governing equations \eqref{eqn:57} as $\bm{E}=\bm{0}$ and the unknowns as $\bm{X}=\{R_{ijk}^{[e]}(t),X(t), Y(t),\phi(t)\}$. Considering the base state of all degrees of freedom in the system, we obtain:
+\begin{equation}
+	\label{eqn:112}
+	\overline{\bm{X}(t)}=\left\{\begin{aligned}
+		&\overline{X(t)}=\frac{1}{2}Vt^2+Ut+X_{0} \\
+		&\overline{Y(t)}=Vt+Y_{0} \\
+		&\overline{\phi(t)}=\phi_{eq} \\
+		&\overline{R_{ijk}^{[e]}(t)}=R_{ijk}^{eq}.
+	\end{aligned}\right.	
+\end{equation}
+Then, with the linear stability, we have 
+\begin{equation}
+	\label{eqn:123}
+    \bm{X}(t)=\overline{\bm{X}(t)}+\epsilon \hat{\bm{X}}(t),
+\end{equation}
+where $\bar{\bm{X}}$ is the base state, $\hat{\bm{X}}$ is the perturbation and $\epsilon$ is the amplitude of the (initial) perturbation.
+Applying Taylor's expansion at the base state, we obtain:
+\begin{equation}
+	\label{eqn:109}
+\bm{E}(\bm{X})=\bm{E}(\bar{\bm{X}}+\epsilon \hat{\bm{X}})=\bm{E}(\bar{\bm{X}})+\epsilon \Big(\frac{\partial \bm{E}}{\partial \bm{X}}\Big|_{\bm{X}=\bar{\bm{X}}}\hat{\bm{X}}+\frac{\partial \bm{E}}{\partial \dot{\bm{X}}}\Big|_{\bm{X}=\bar{\bm{X}}}\dot{\hat{\bm{X}}}\Big)+o(\epsilon),
+\end{equation}
+ Since $\bm{E}(\bar{\bm{X}})=\bm{0}$, we have 
+\begin{equation}
+	\label{eqn:110}
+	\frac{\partial \bm{E}}{\partial \bm{X}}\Big|_{\bm{X}=\bar{\bm{X}}}\hat{\bm{X}}+\frac{\partial \bm{E}}{\partial \dot{\bm{X}}}\Big|_{\bm{X}=\bar{\bm{X}}}\dot{\hat{\bm{X}}}=\bm{0}.
+\end{equation}
+We define the Jacobian matrix as $\bm{\mathcal{J}}=\frac{\partial \bm{E}}{\partial \bm{X}}\Big|_{\bm{X}=\bar{\bm{X}}}$ and the mass matrix as $\bm{\mathcal{M}}=\frac{\partial \bm{E}}{\partial \dot{\bm{X}}}\Big|_{\bm{X}=\bar{\bm{X}}}$. Then, the above equation becomes 
+\begin{equation}
+	\label{eqn:111}
+\bm{\mathcal{J}}\hat{\bm{X}}+\bm{\mathcal{M}}\dot{\hat{\bm{X}}}=\bm{0}.
+\end{equation}
+This is different from the classic theory, as our base state here is also a function of time, namely $\frac{d\bar{\bm{X}}}{dt}\neq\bm{0}$. However, we ultimately find that both the Jacobian matrix and the mass matrix are time-independent, which allows us to proceed with the standard eigenvalue analysis.
+
+ In our project, when the particle reaches equilibrium, only its orientation (inclination) and configuration attains the steady state, meaning  $\frac{d\theta}{dt}=\frac{dR_{ijk}^{[e]}}{dt}=0$, while the other two motion variables, $X(t), Y(t)$, remain time-dependent. Actually, in this so-called "steady" state, the particle undergoes a certain type motion with a parabolic trajectory. We may regard it as quasi-steady, since any perturbation to the system would disrupt the particle's motion pattern, yet after some time, the system would return to its original motion type. 
+ 
+ \chapter{Results}
+\section{Geometry of the particle}
+This report draws on the definition of the boomerang's geometry as described in Roggeveen and Stone's paper \cite{roggeveen2022motion}, using two parameters, $q$ and $\alpha$, to characterise the boomerang-shape when the elastic particle is in rest state. We define the length of the long arm of the boomerang as $l_1=q+0.5$, and the length of the short arm as $l_2=0.5-q$, where $q \in [0,0.5)$. The total length is $l_1+l_2=1$ (note that we set the total length of the particle as the characteristic length $\mathcal{L}$). Additionally, we define the angle between the two arms as the opening angle $\alpha$, where $\alpha \in (0,2\pi)$. The hinge of the boomerang is not flexible so that the opening angle $\alpha$ remains fixed. Figure \ref{fig:1} shows the basic idea about these geometrical setups. 
+\begin{figure}[htb]
+	\begin{center}
+		% specify width as 80% of the width of the text on the page
+		% we can also specify a width in centimetres, e.g. [width=8cm]
+		\includegraphics[width=1\textwidth]{plot/geometry.png}
+		\caption{Schematics of the geometry of the boomerang. The left diagram illustrates the case without any applied force, while the right diagram shows a deformed configuration with traction $\mathbf{f}$ acting on it.}
+		\label{fig:1}
+	\end{center}
+	%	\setlength{\abovecaptionskip}{-0.5 cm}
+\end{figure}
+Note that there are several extreme cases:
+\begin{equation}
+	\label{eqn:1}
+	\left.
+	\begin{aligned}
+		&\alpha=0,\pi \\
+		&	q=0.5
+	\end{aligned}
+	\right\}\Longrightarrow \text{straight rod},\quad 
+	q=0, \alpha \neq 0, \pi \Longrightarrow \text{same arm length}.
+\end{equation}
+We exclude the case where the object becomes a straight rod (considering the ranges of $q$ and $\alpha$), as this shape yields only the trivial solution by using slender body theory. We assume that the boomerang has a small radius $\frac{h}{2}\ll \min\{l_1, l_2\}$, and define the aspect ratio $\epsilon$, which is small, such that $\epsilon=\frac{h/2}{\min\{l_1, l_2\}}\ll1$. 
+
+\begin{figure}[!h]
+	\begin{center}
+		% specify width as 80% of the width of the text on the page
+		% we can also specify a width in centimetres, e.g. [width=8cm]
+		\includegraphics[width=0.8\textwidth]{plot/fluid.png}
+		\caption{Schematic of an elastic boomerang-shaped particle in the deformed state immersed in shear flow. The dashed black and dashed red lines represent the undeformed configurations corresponding to the deformed arms $\mathbf{R}^{(1)}$ and $\mathbf{R}^{(2)}$, respectively. $\alpha$ is the opening angle between the two dashed lines.} 
+		\label{fig:6}
+	\end{center}
+	%	\setlength{\abovecaptionskip}{-0.5 cm}
+\end{figure}
+To implement the algorithm for this particle, we model it as two elastic beams joined at the hinge point. Initially, both beams are clamped at the origin, differing in length and rotation angle. The length of the long beam is $q+0.5$, while the short beam's length is $0.5-q$, where $q \in [0,0.5)$. The rotation angle for the long beam is given by the inclination $\phi(t)$, whereas for the short beam, it is $\phi(t)+\alpha$. Figure \ref{fig:6} provides a schematic illustration of this process. 
+
+\section{Equilibrium solutions}
+\subsection{Four equilibria}
+Roggeveen and Stone \cite{roggeveen2022motion} have studied the dynamics of this particle shape for the rigid case, namely $\mathcal{I}=0$, in shear flow at zero Reynolds number. If, when $\mathcal{I}=0$, the solutions coincide with the results presented in their paper, it would lend a certain degree of validation to our results.
+We run multiple examples using \texttt{oomph-lib} and select some representative cases to present in this report. Similar to the results of Roggeveen and Stone in Figure \ref{fig:18}, the complete solutions of the system also exhibit four equilibria. Of these four fixed orientations, two differ from the other two by an angle of $\pi$ but possess the same shapes, as shown in Figure \ref{fig:20}. Hence, to simplify the discussion, we will focus solely on one group of the two solutions in the following sections.
+\begin{figure}[!h]
+	\begin{center}
+		% specify width as 80% of the width of the text on the page
+		% we can also specify a width in centimetres, e.g. [width=8cm]
+		\includegraphics[width=1\textwidth]{plot/four_solutions2.png}
+		\caption{Left: the complete solutions of the system for $q=0.3, \alpha=0.125\pi, \mathcal{I}=0.0003$. Right: the shapes are compared by rotating the black curve by $\pi$ to match the corresponding blue or green curve.}
+		\label{fig:20}
+	\end{center}
+	%	\setlength{\abovecaptionskip}{-0.5 cm}
+\end{figure}
+
+\subsection{Effect of increasing FSI parameter $\mathcal{I}$}
+\begin{figure}[!h]
+	\begin{center}
+		% specify width as 80% of the width of the text on the page
+		% we can also specify a width in centimetres, e.g. [width=8cm]
+		\includegraphics[width=0.8\textwidth]{plot/combine_elastic_beam_I_theta_q_0.40_alpha_0.230pi_initial_-4.80_paper.png}
+		\caption{The steady orientation $\theta_{eq}$ is plotted against the FSI parameter $\mathcal{I}$ for the particle with shape parameters $q = 0.4$ and $\alpha = 0.230\pi$. Deformations of all shapes are amplified. In the top-right corner, a comparison between the amplified and actual shapes is provided at the limit point to illustrate the scale of deformation. We use 20 elements in solving the problem, and a convergence test, also shown in the top-right corner after doubling the number of elements, verifies that 20 elements are sufficient to accurately capture the behaviour of the system. Shapes along each branch of the curve consistently display the same colour. At the limit point, two branches coalesce and their corresponding particle shapes become identical.}
+		\label{fig:7}
+	\end{center}
+	%	\setlength{\abovecaptionskip}{-0.5 cm}
+\end{figure}
+\begin{figure}[!h]
+	\begin{center}
+		% specify width as 80% of the width of the text on the page
+		% we can also specify a width in centimetres, e.g. [width=8cm]
+		\includegraphics[width=0.8\textwidth]{plot/initial_combine_elastic_beam_I_theta_q_0.400_alpha_0.180pi_initial_-4.80_paper.png}
+        \caption{The steady orientation $\theta_{eq}$ is plotted against the FSI parameter $\mathcal{I}$ for the particle with shape parameters $q = 0.4$ and $\alpha = 0.180\pi$. The convergence test with doubled elements is performed at one of the limit points.}
+        \label{fig:8}
+	\end{center}
+	%	\setlength{\abovecaptionskip}{-0.5 cm}
+\end{figure}
+\begin{figure}[!h]
+	\begin{center}
+		% specify width as 80% of the width of the text on the page
+		% we can also specify a width in centimetres, e.g. [width=8cm]
+		\includegraphics[width=0.6\textwidth]{plot/elastic_beam_I_theta_q_0.400_alpha_paper.png}
+		\caption{A sequence of plots presents the steady orientation $\theta_{eq}$ against the FSI parameter $\mathcal{I}$ for shape parameters $q = 0.4$ with varying $\alpha$. The top-left subplot shows the convergence test with doubled elements, and the scale of the axes is consistent across all subplots.}
+		\label{fig:9}
+	\end{center}
+	%	\setlength{\abovecaptionskip}{-0.5 cm}
+\end{figure}
+
+\subsection{Stability}
+\begin{figure}[!h]
+	\begin{center}
+		% specify width as 80% of the width of the text on the page
+		% we can also specify a width in centimetres, e.g. [width=8cm]
+		\includegraphics[width=0.6\textwidth]{plot/solid_dash_combine_elastic_beam_I_theta_q_0.40_alpha_0.230pi_initial_-4.80_0.png}
+		\caption{The linear stability analysis for the case $q=0.4,\alpha=0.230\pi$ shows that there is no positive eigenvalue along the upper branch, indicating that the entire system is stable. After the limit point, a positive eigenvalue emerges, causing the lower branch unstable. This behaviour is consistent with the rigid case when $\mathcal{I}=0$, where the upper point is stable and the lower point is unstable.}
+		\label{fig:10}
+	\end{center}
+	%	\setlength{\abovecaptionskip}{-0.5 cm}
+\end{figure}
+\begin{figure}[!h]
+	\begin{center}
+		% specify width as 80% of the width of the text on the page
+		% we can also specify a width in centimetres, e.g. [width=8cm]
+		\includegraphics[width=0.6\textwidth]{plot/solid_dash_initial_combine_elastic_beam_I_theta_q_0.400_alpha_0.180pi_initial_-4.80_0.png}
+		\caption{The linear stability analysis for the case $q=0.4,\alpha=0.180\pi$ reveals a more complex scenario. The upper branch (solid line) remains stable, as no positive eigenvalues are present. After the rightmost limit point, the system becomes unstable with the emergence of a single positive eigenvalue (long-dashed line). Following the left limit point, the stability does not switch, but an additional positive eigenvalue appears (short-dashed line), resulting in two positive eigenvalues in total. Subsequently, at the right limit point, although the stability does not exchange, one of the positive eigenvalues vanishes (returning to the long-dashed line). These results remain consistent with the rigid case.}
+		\label{fig:11}
+	\end{center}
+	%	\setlength{\abovecaptionskip}{-0.5 cm}
+\end{figure}
+\begin{figure}[!h]
+	\begin{center}
+		% specify width as 80% of the width of the text on the page
+		% we can also specify a width in centimetres, e.g. [width=8cm]
+		\includegraphics[width=1\textwidth]{plot/combine_elastic_beam_I_theta_q_0.452_alpha_0.125pi_initial_-4.80_0.png}
+		\caption{The steady orientation $\theta_{eq}$ is plotted against the FSI coefficient $\mathcal{I}$ for the particle with shape parameters $q = 0.452$ and $\alpha = 0.125\pi$. The top-right subplot shows the convergence test with doubled elements for the case at $\mathcal{I}=0.65$.}
+		\label{fig:12}
+	\end{center}
+	%	\setlength{\abovecaptionskip}{-0.5 cm}
+\end{figure}
+\begin{figure}[!h]
+	\centering
+	\begin{minipage}{\linewidth}
+		\centering
+		\includegraphics[scale=0.166]{plot/elastic_beam_I_theta_q_0.452_alpha_restart1.png}
+	\end{minipage}
+	\begin{minipage}{\linewidth}
+		\centering
+		\includegraphics[scale=0.166]{plot/elastic_beam_I_theta_q_0.452_alpha_restart2.png}
+	\end{minipage}
+	\begin{minipage}{\linewidth}
+		\centering
+		\includegraphics[scale=0.166]{plot/elastic_beam_I_theta_q_0.452_alpha_restart3.png}
+	\end{minipage}
+	\caption{A sequence of logarithmic plots presents the steady orientation $\theta_{eq}$ against the FSI coefficient $\mathcal{I}$ for shape parameters $q = 0.452$ with varying $\alpha$. The top-left subplot shows the convergence test with doubled elements, and the scale of the axes is consistent across all subplots.}
+	\label{fig:13}
+\end{figure}
+\begin{table}[!h]
+	\setlength{\belowcaptionskip}{0.8cm}
+	\caption{The four types of deformations are categorised by the number of humps appearing on the long arm of the particle.} 
+	\label{Table:1}
+	\renewcommand\arraystretch{1.5}
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{|>{\centering\arraybackslash}m{0.25\textwidth} >{\centering\arraybackslash}m{0.25\textwidth} >{\centering\arraybackslash}m{0.25\textwidth} >{\centering\arraybackslash}m{0.25\textwidth}|}
+			\hline
+			\hspace{0.8cm}one hump  & \hspace{-0.3cm}two humps& \hspace{-1cm}three humps & \hspace{-1.8cm}four humps \\
+			\hline
+			\multicolumn{4}{|c|}{\includegraphics[width=\linewidth]{plot/geometry3.png}} \\
+			\hline
+	\end{tabular}}
+\end{table}
+\begin{figure}[!h]
+	\begin{center}
+		% specify width as 80% of the width of the text on the page
+		% we can also specify a width in centimetres, e.g. [width=8cm]
+		\includegraphics[width=0.6\textwidth]{plot/elastic_beam_alpha_theta_eq_q_0.400.png}
+		\caption{The steady orientation $\theta_{eq}$ is plotted against  the opening angle $\alpha$ for the particle with $q = 0.4$. The bottom-right subplot shows the figures of $\mathcal{I}=1.0, 1.5, 2.0$ at a smaller scale.}
+		\label{fig:14}
+	\end{center}
+	%	\setlength{\abovecaptionskip}{-0.5 cm}
+\end{figure}
+\begin{figure}[!h]
+	\begin{center}
+		% specify width as 80% of the width of the text on the page
+		% we can also specify a width in centimetres, e.g. [width=8cm]
+		\includegraphics[width=0.6\textwidth]{plot/elastic_beam_general.png}
+		\caption{This plot shows the boundary of the fixed points region for different FSI parameter $\mathcal{I}$.}
+		\label{fig:15}
+	\end{center}
+	%	\setlength{\abovecaptionskip}{-0.5 cm}
+\end{figure}
+\begin{figure}[!h]
+	\begin{center}
+		% specify width as 80% of the width of the text on the page
+		% we can also specify a width in centimetres, e.g. [width=8cm]
+		\includegraphics[width=0.5\textwidth]{plot/tensile_boomerang.png}
+		\caption{The rigid structure particle ($\mathcal{I}=0$).}
+		\label{fig:16}
+	\end{center}
+	%	\setlength{\abovecaptionskip}{-0.5 cm}
+\end{figure}
+
+\newpage
+To understand the mechanism of deformation, we define the tensile stress as 
+\begin{equation}
+	\label{eqn:91}
+	\sigma(\xi)=\int_0^\xi (\mathbf{f}\cdot\mathbf{t}) \left |\frac{\partial \mathbf{R}}{\partial \xi}\right|\,d\xi,
+\end{equation}
+where $\mathbf{t}$ is the unit tangent vector to the surface of the particle. As shown in Figure \ref{fig:15}, we use $\sigma_1$ and $\mathbf{t}_1$ to denote the tensile stress and tangent vector in the short arm, and $\sigma_2$ and $\mathbf{t}_2$ for the long arm. At the hinge point, we have 
+\begin{equation}
+	\label{eqn:92}
+	\sigma_1(0.5-q)=\mathbf{F}_1\cdot\mathbf{t}_1, 
+\end{equation}
+\begin{equation}
+	\label{eqn:93}
+	\sigma_2(0.5-q)=\mathbf{F}_2\cdot\mathbf{t}_2, 
+\end{equation}
+where $\mathbf{F}_1$ and $\mathbf{F}_2$ represent the net drag acting on the short arm and long arm, respectively. Then, if $\xi \in [0,0.5-q]$, we have 
+\begin{equation}
+	\label{eqn:94}
+	\sigma_1(\xi)= \int_0^\xi (\mathbf{f}\cdot\mathbf{t}_1) \left |\frac{\partial \mathbf{R}}{\partial \xi}\right|\,d\xi.
+\end{equation}
+If $\xi \in [0.5-q,1]$, we have
+\begin{equation}
+	\label{eqn:95}
+	\begin{aligned}
+		\sigma_2(\xi)&= \int_0^\xi (\mathbf{f}\cdot\mathbf{t}_2) \left |\frac{\partial \mathbf{R}}{\partial \xi}\right|\,d\xi\\
+		&=\int_0^{0.5-q} (\mathbf{f}\cdot\mathbf{t}_2) \left |\frac{\partial \mathbf{R}}{\partial \xi}\right|\,d\xi+\int_{0.5-q}^\xi (\mathbf{f}\cdot\mathbf{t}_2) \left |\frac{\partial \mathbf{R}}{\partial \xi}\right|\,d\xi\\
+		&=\mathbf{F}_1\cdot\mathbf{t}_2+\int_{0.5-q}^\xi (\mathbf{f}\cdot\mathbf{t}_2) \left |\frac{\partial \mathbf{R}}{\partial \xi}\right|\,d\xi.
+	\end{aligned}
+\end{equation}
+Since we are investigating the equilibrium state, the components of the two net drag forces in the $\mathbf{t}_2$ direction must also be balanced. Hence, we have 
+\begin{equation}
+	\label{eqn:96}
+	\mathbf{F}_1\cdot\mathbf{t}_2=-\mathbf{F}_2\cdot\mathbf{t}_2.
+\end{equation}
+Now, substituting \eqref{eqn:96} into the last step of \eqref{eqn:95}, we obtain 
+\begin{equation}
+	\begin{aligned}
+		\label{eqn:97}
+		\sigma_2(\xi)&=-\mathbf{F}_2\cdot\mathbf{t}_2+\int_{0.5-q}^\xi (\mathbf{f}\cdot\mathbf{t}_2) \left |\frac{\partial \mathbf{R}}{\partial \xi}\right|\,d\xi\\
+		&=-\sigma_2(0.5-q)+\int_{0.5-q}^\xi (\mathbf{f}\cdot\mathbf{t}_2) \left |\frac{\partial \mathbf{R}}{\partial \xi}\right|\,d\xi.
+	\end{aligned}
+\end{equation}
+Therefore, we have 
+\begin{equation}
+	\sigma(\xi)=\left\{
+	\begin{aligned}
+		\label{eqn:98}
+		&\int_0^\xi (\mathbf{f}\cdot\mathbf{t}_1) \left |\frac{\partial \mathbf{R}}{\partial \xi}\right|\,d\xi,\quad \xi\in[0,0.5-q];\\
+		&-\mathbf{F}_2\cdot\mathbf{t}_2+\int_{0.5-q}^\xi (\mathbf{f}\cdot\mathbf{t}_2) \left |\frac{\partial \mathbf{R}}{\partial \xi}\right|\,d\xi, \quad \xi\in[0.5-q,1].
+	\end{aligned}\right.
+\end{equation}
+\begin{figure}[!h]
+	\centering
+	\subfigure[$q=0.35,\alpha=0.125\pi$]{
+		\begin{minipage}[b]{0.3\textwidth}
+			\includegraphics[width=1\textwidth]{plot/sigma_q_0.35_alpha_0.125pi.png} 
+		\end{minipage}
+		\label{fig:16.a}
+	}
+	\subfigure[$q=0.40,\alpha=0.125\pi$]{
+		\begin{minipage}[b]{0.3\textwidth}
+			\includegraphics[width=1\textwidth]{plot/sigma_q_0.4_alpha_0.125pi.png}
+		\end{minipage}
+		\label{fig:16.b}
+	}
+	\subfigure[$q=0.45,\alpha=0.125\pi$]{
+		\begin{minipage}[b]{0.3\textwidth}
+			\includegraphics[width=1\textwidth]{plot/sigma_q_0.45_alpha_0.125pi.png}
+		\end{minipage}
+		\label{fig:16.c}
+	}
+	\\ 
+	\subfigure[$q=0.35,\alpha=0.25\pi$]{
+		\begin{minipage}[b]{0.3\textwidth}
+			\includegraphics[width=1\textwidth]{plot/sigma_q_0.35_alpha_0.25pi.png} 
+		\end{minipage}
+		\label{fig:16.d}
+	}
+	\subfigure[$q=0.40,\alpha=0.25\pi$]{
+		\begin{minipage}[b]{0.3\textwidth}
+			\includegraphics[width=1\textwidth]{plot/sigma_q_0.4_alpha_0.25pi.png}
+		\end{minipage}
+		\label{fig:16.e}
+	}
+	\subfigure[$q=0.45,\alpha=0.25\pi$]{
+		\begin{minipage}[b]{0.3\textwidth}
+			\includegraphics[width=1\textwidth]{plot/sigma_q_0.45_alpha_0.25pi.png}
+		\end{minipage}
+		\label{fig:16.f}
+	}
+	\caption{Tensile stress for different shape parameters ($\mathcal{I}=0$).}
+	\label{fig:17}
+\end{figure}
+Figure \ref{fig:17} presents the six results of the tensile stress for different shape parameters when $\mathcal{I}=0$. When $\xi=0$ or $\xi=1$, $\sigma=0$, which is consistent with the fact that no force acts on the free ends. Each plot shows a jump discontinuity at the hinge point. It can be observed that the tensile stress at this point is non-zero and has opposite signs on either side, indicating a complex mechanical relationship at the hinge. The curves illustrate the tensile stress experienced by the rigid particle under fluid forces, indicating a tendency for deformation if it were made of elastic material. 
+
+
+\bibliography{references}
+
+\end{document}
