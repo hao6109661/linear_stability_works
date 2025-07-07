@@ -1,3 +1,0 @@
-composite -gravity east -geometry +0-15 combine_elastic_beam_I_theta_q_0.400_alpha_0.180pi_initial_-4.80_refine2_15_new_subs.png initial_combine_elastic_beam_I_theta_q_0.400_alpha_0.180pi_initial_-4.80_refine2_new_0.png output.png
-
-
