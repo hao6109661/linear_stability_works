@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: thesis_updated_2020.aux
+The style file: abbrv.bst
+Database file #1: references.bib
+Warning--empty journal in lindner2015elastic
+Warning--empty journal in oberbeck1876ueber
+Warning--empty journal in stokes1851effect
+You've used 37 entries,
+            2118 wiz_defined-function locations,
+            738 strings with 9853 characters,
+and the built_in function-call counts, 12137 in all, are:
+= -- 1230
+> -- 514
+< -- 3
++ -- 212
+- -- 166
+* -- 892
+:= -- 2049
+add.period$ -- 113
+call.type$ -- 37
+change.case$ -- 192
+chr.to.int$ -- 0
+cite$ -- 40
+duplicate$ -- 431
+empty$ -- 956
+format.name$ -- 166
+if$ -- 2479
+int.to.chr$ -- 0
+int.to.str$ -- 37
+missing$ -- 37
+newline$ -- 188
+num.names$ -- 76
+pop$ -- 144
+preamble$ -- 1
+purify$ -- 155
+quote$ -- 0
+skip$ -- 301
+stack$ -- 0
+substring$ -- 929
+swap$ -- 58
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 148
+warning$ -- 3
+while$ -- 134
+width$ -- 39
+write$ -- 404
+(There were 3 warnings)

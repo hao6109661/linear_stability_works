@@ -1,0 +1,23 @@
+\contentsline {chapter}{Abstract}{4}{}%
+\contentsline {chapter}{\numberline {1}Introduction}{5}{}%
+\contentsline {section}{\numberline {1.1}Background}{5}{}%
+\contentsline {section}{\numberline {1.2}Slender body theory}{10}{}%
+\contentsline {section}{\numberline {1.3}Outline}{11}{}%
+\contentsline {chapter}{\numberline {2}Basic Setup}{12}{}%
+\contentsline {section}{\numberline {2.1}Stokes equations}{12}{}%
+\contentsline {section}{\numberline {2.2}Frames and flow}{13}{}%
+\contentsline {chapter}{\numberline {3}Theoretical Framework}{16}{}%
+\contentsline {section}{\numberline {3.1}Fluid-solid interaction}{16}{}%
+\contentsline {subsection}{\numberline {3.1.1}Fluid mechanics}{16}{}%
+\contentsline {subsection}{\numberline {3.1.2}Solid mechanics}{18}{}%
+\contentsline {subsection}{\numberline {3.1.3}Fluid–solid coupling}{20}{}%
+\contentsline {section}{\numberline {3.2}Equilibrium equations and implementation}{21}{}%
+\contentsline {subsection}{\numberline {3.2.1}Solutions with constant orientations}{21}{}%
+\contentsline {subsection}{\numberline {3.2.2}Equilibrium equations}{23}{}%
+\contentsline {subsection}{\numberline {3.2.3}Implementation}{25}{}%
+\contentsline {chapter}{\numberline {4}Results}{29}{}%
+\contentsline {section}{\numberline {4.1}Geometry of the particle}{29}{}%
+\contentsline {section}{\numberline {4.2}Incorporation into the algorithm}{30}{}%
+\contentsline {section}{\numberline {4.3}Numerical results}{30}{}%
+\contentsline {chapter}{\numberline {5}Conclusions}{42}{}%
+\contentsline {chapter}{\numberline {6}Future plan}{44}{}%

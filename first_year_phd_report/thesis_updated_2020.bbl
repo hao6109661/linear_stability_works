@@ -1,0 +1,212 @@
+\begin{thebibliography}{10}
+
+\bibitem{brennen1977fluid}
+C.~Brennen and H.~Winet.
+\newblock Fluid mechanics of propulsion by cilia and flagella.
+\newblock {\em Annual Review of Fluid Mechanics}, 9(1):339--398, 1977.
+
+\bibitem{brenner1963stokes}
+H.~Brenner.
+\newblock The stokes resistance of an arbitrary particle.
+\newblock {\em Chemical Engineering Science}, 18(1):1--25, 1963.
+
+\bibitem{bretherton1962motion}
+F.~P. Bretherton.
+\newblock The motion of rigid particles in a shear flow at low reynolds number.
+\newblock {\em Journal of Fluid Mechanics}, 14(2):284--304, 1962.
+
+\bibitem{broersma1960rotational}
+S.~Broersma.
+\newblock Rotational diffusion constant of a cylindrical particle.
+\newblock {\em The Journal of Chemical Physics}, 32(6):1626--1631, 1960.
+
+\bibitem{broersma1960viscous}
+S.~Broersma.
+\newblock Viscous force constant for a closed cylinder.
+\newblock {\em The Journal of Chemical Physics}, 32(6):1632--1635, 1960.
+
+\bibitem{burgers1938motion}
+J.~M. Burgers.
+\newblock On the motion of small particles of elongated form suspended in a
+  viscous liquid.
+\newblock {\em Kon. Ned. Akad. Wet. Verhand.(Eerste Sectie)}, 16:113--184,
+  1938.
+
+\bibitem{cox1970motion}
+R.~G. Cox.
+\newblock The motion of long slender bodies in a viscous fluid part 1. general
+  theory.
+\newblock {\em Journal of Fluid mechanics}, 44(4):791--810, 1970.
+
+\bibitem{cox1971motion}
+R.~G. Cox.
+\newblock The motion of long slender bodies in a viscous fluid. part 2. shear
+  flow.
+\newblock {\em Journal of Fluid Mechanics}, 45(4):625--657, 1971.
+
+\bibitem{de2017spontaneous}
+G.~De~Canio, E.~Lauga, and R.~E. Goldstein.
+\newblock Spontaneous oscillations of elastic filaments induced by molecular
+  motors.
+\newblock {\em Journal of The Royal Society Interface}, 14(136):20170491, 2017.
+
+\bibitem{doi2005motion}
+M.~Doi and M.~Makino.
+\newblock Motion of micro-particles of complex shape.
+\newblock {\em Progress in polymer science}, 30(8-9):876--884, 2005.
+
+\bibitem{gaffney2011mammalian}
+E.~A. Gaffney, H.~Gad{\^e}lha, D.~J. Smith, J.~R. Blake, and J.~C.
+  Kirkman-Brown.
+\newblock Mammalian sperm motility: observation and theory.
+\newblock {\em Annual Review of Fluid Mechanics}, 43(1):501--528, 2011.
+
+\bibitem{goldstein2015green}
+R.~E. Goldstein.
+\newblock Green algae as model organisms for biological fluid dynamics.
+\newblock {\em Annual review of fluid mechanics}, 47(1):343--375, 2015.
+
+\bibitem{hinch1979rotation}
+E.~Hinch and L.~Leal.
+\newblock Rotation of small non-axisymmetric particles in a simple shear flow.
+\newblock {\em Journal of Fluid Mechanics}, 92(3):591--607, 1979.
+
+\bibitem{howard1995fiber}
+P.~Howard, M.~King, M.~Morris, J.-P. F{\'e}raud, G.~Slusher, and S.~Lipari.
+\newblock Fiber/proppant mixtures control proppant flowback in south texas.
+\newblock In {\em SPE Annual Technical Conference and Exhibition}, pages
+  SPE--30495. SPE, 1995.
+
+\bibitem{jeffery1922motion}
+G.~B. Jeffery.
+\newblock The motion of ellipsoidal particles immersed in a viscous fluid.
+\newblock {\em Proceedings of the Royal Society of London. Series A, Containing
+  papers of a mathematical and physical character}, 102(715):161--179, 1922.
+
+\bibitem{KIM199147}
+S.~Kim and S.~J. Karrila.
+\newblock Chapter 3 - the disturbance field of a single particle in a steady
+  flow.
+\newblock In S.~Kim and S.~J. Karrila, editors, {\em Microhydrodynamics}, pages
+  47--81. Butterworth-Heinemann, 1991.
+
+\bibitem{lauga2009hydrodynamics}
+E.~Lauga and T.~R. Powers.
+\newblock The hydrodynamics of swimming microorganisms.
+\newblock {\em Reports on progress in physics}, 72(9):096601, 2009.
+
+\bibitem{lindner2015elastic}
+A.~Lindner and M.~Shelley.
+\newblock Elastic fibers in flows.
+\newblock 2015.
+
+\bibitem{liu2024spectral}
+L.~Liu, P.~Sznajder, and M.~L. Ekiel-Je{\.z}ewska.
+\newblock Spectral analysis for elastica dynamics in a shear flow.
+\newblock {\em Physical Review Fluids}, 9(1):014101, 2024.
+
+\bibitem{liu2018morphological}
+Y.~Liu, B.~Chakrabarti, D.~Saintillan, A.~Lindner, and O.~Du~Roure.
+\newblock Morphological transitions of elastic filaments in shear flow.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  115(38):9438--9443, 2018.
+
+\bibitem{oberbeck1876ueber}
+A.~Oberbeck.
+\newblock Ueber station{\"a}re fl{\"u}ssigkeitsbewegungen mit
+  ber{\"u}cksichtigung der inneren reibung.
+\newblock 1876.
+
+\bibitem{quennouz2015transport}
+N.~Quennouz, M.~Shelley, O.~Du~Roure, and A.~Lindner.
+\newblock Transport and buckling dynamics of an elastic fibre in a viscous
+  cellular flow.
+\newblock {\em Journal of Fluid Mechanics}, 769:387--402, 2015.
+
+\bibitem{roggeveen2022motion}
+J.~V. Roggeveen and H.~A. Stone.
+\newblock Motion of asymmetric bodies in two-dimensional shear flow.
+\newblock {\em Journal of Fluid Mechanics}, 939:A23, 2022.
+
+\bibitem{shelley2016dynamics}
+M.~J. Shelley.
+\newblock The dynamics of microtubule/motor-protein assemblies in biology and
+  physics.
+\newblock {\em Annual review of fluid mechanics}, 48(1):487--506, 2016.
+
+\bibitem{shelley2000stokesian}
+M.~J. Shelley and T.~Ueda.
+\newblock The stokesian hydrodynamics of flexing, stretching filaments.
+\newblock {\em Physica D: Nonlinear Phenomena}, 146(1-4):221--245, 2000.
+
+\bibitem{stokes1851effect}
+G.~G. Stokes et~al.
+\newblock On the effect of the internal friction of fluids on the motion of
+  pendulums.
+\newblock 1851.
+
+\bibitem{taylor1969motion}
+G.~Taylor.
+\newblock Motion of axisymmetric bodies in viscous fluids.
+\newblock {\em Problems of hydrodynamics and continuum mechanics}, 718, 1969.
+
+\bibitem{tekce2007effect}
+H.~S. Tekce, D.~Kumlutas, and I.~H. Tavman.
+\newblock Effect of particle shape on thermal conductivity of copper reinforced
+  polymer composites.
+\newblock {\em Journal of reinforced plastics and composites}, 26(1):113--121,
+  2007.
+
+\bibitem{thorp2019motion}
+I.~R. Thorp and J.~R. Lister.
+\newblock Motion of a non-axisymmetric particle in viscous shear flow.
+\newblock {\em Journal of Fluid Mechanics}, 872:532--559, 2019.
+
+\bibitem{tillett1970axial}
+J.~Tillett.
+\newblock Axial and transverse stokes flow past slender axisymmetric bodies.
+\newblock {\em Journal of Fluid Mechanics}, 44(3):401--417, 1970.
+
+\bibitem{tornberg2004simulating}
+A.-K. Tornberg and M.~J. Shelley.
+\newblock Simulating the dynamics and interactions of flexible fibers in stokes
+  flows.
+\newblock {\em Journal of Computational Physics}, 196(1):8--40, 2004.
+
+\bibitem{tuck1964some}
+E.~Tuck.
+\newblock Some methods for flows past blunt slender bodies.
+\newblock {\em Journal of Fluid Mechanics}, 18(4):619--635, 1964.
+
+\bibitem{tuck1970toward}
+E.~Tuck.
+\newblock Toward the calculation and minimization of stokes drag on bodies of
+  arbitrary shape.
+\newblock {\em Proc. Institute of Engineers, Australia, 1970}, pages 29--32,
+  1970.
+
+\bibitem{vaquero2024u}
+C.~Vaquero-Stainer, T.~Miara, A.~Juel, D.~Pihler-Puzovi{\'c}, and M.~Heil.
+\newblock U-shaped disks in stokes flow: Chiral sedimentation of a non-chiral
+  particle.
+\newblock {\em arXiv preprint arXiv:2406.13837}, 2024.
+
+\bibitem{wang2012flipping}
+J.~Wang, E.~J. Tozzi, M.~D. Graham, and D.~J. Klingenberg.
+\newblock Flipping, scooping, and spinning: drift of rigid curved nonchiral
+  fibers in simple shear flow.
+\newblock {\em Physics of Fluids}, 24(12), 2012.
+
+\bibitem{yasuda2004experimental}
+K.~Yasuda, T.~Kyuto, and N.~Mori.
+\newblock An experimental study of flow-induced fiber orientation and
+  concentration distributions in a concentrated suspension flow through a slit
+  channel containing a cylinder.
+\newblock {\em Rheologica acta}, 43:137--145, 2004.
+
+\bibitem{zuk2021universal}
+P.~J. {\.Z}uk, A.~M. S{\l}owicka, M.~L. Ekiel-Je{\.z}ewska, and H.~A. Stone.
+\newblock Universal features of the shape of elastic fibres in shear flow.
+\newblock {\em Journal of Fluid Mechanics}, 914:A31, 2021.
+
+\end{thebibliography}
