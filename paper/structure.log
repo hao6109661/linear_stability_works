@@ -1,97 +1,57 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.6.30)  8 JUL 2025 21:32
- restricted system commands enabled.
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.7.10)  10 JUL 2025 01:56
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
 **structure.tex
 (./structure.tex
 LaTeX2e <2021-11-15> patch level 1
-Lua module: luaotfload 2021-05-21 3.18 Lua based OpenType font support
-Lua module: lualibs 2021-05-20 2.74 ConTeXt Lua standard libraries.
-Lua module: lualibs-extended 2021-05-20 2.74 ConTeXt Lua libraries -- extended c
-ollection.
-luaotfload | conf : Root cache directory is "/home/w62936hy/.texlive2021/texmf-v
-ar/luatex-cache/generic/names".
-luaotfload | init : Loading fontloader "fontloader-2021-05-20.lua" from kpse-res
-olved path "/usr/share/texlive/texmf-dist/tex/luatex/luaotfload/fontloader-2021-
-05-20.lua".
-Lua-only attribute luaotfload@noligature = 1
-Lua-only attribute luaotfload@syllabe = 2
-luaotfload | init : Context OpenType loader version 3.116
-Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
-Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
-Inserting `luaotfload.glyph_stream' at position 1 in `glyph_stream_provider'.
-Inserting `luaotfload.define_font' at position 1 in `define_font'.
-Lua-only attribute luaotfload_color_attribute = 3
-luaotfload | conf : Root cache directory is "/home/w62936hy/.texlive2021/texmf-v
-ar/luatex-cache/generic/names".
-Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_opentype_file'.
-Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_truetype_file'.
-Inserting `luaotfload.harf.finalize_vlist' at position 1 in `post_linebreak_filt
-er'.
-Inserting `luaotfload.harf.finalize_hlist' at position 2 in `hpack_filter'.
-Inserting `luaotfload.cleanup_files' at position 1 in `wrapup_run'.
-Inserting `luaotfload.harf.finalize_unicode' at position 1 in `finish_pdffile'.
-Inserting `luaotfload.glyphinfo' at position 1 in `glyph_info'.
-Lua-only attribute luaotfload.letterspace_done = 4
-Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
-font'.
-Inserting `luaotfload.aux.set_font_index' at position 2 in `luaotfload.patch_fon
-t'.
-Inserting `luaotfload.aux.patch_cambria_domh' at position 3 in `luaotfload.patch
-_font'.
-Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
-t_unsafe'.
-Inserting `luaotfload.aux.set_capheight' at position 4 in `luaotfload.patch_font
-'.
-Inserting `luaotfload.aux.set_xheight' at position 5 in `luaotfload.patch_font'.
-Inserting `luaotfload.rewrite_fontname' at position 6 in `luaotfload.patch_font'
-. L3 programming layer <2022-01-21>
-Inserting `tracingstacklevels' at position 1 in `input_level_string'.
+L3 programming layer <2022-01-21>
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2021/10/04 v1.4n Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
-luaotfload | db : Font names database loaded from /home/w62936hy/.texlive2021/te
-xmf-var/luatex-cache/generic/names/luaotfload-names.luc)
-\c@part=\count183
-\c@chapter=\count184
-\c@section=\count185
-\c@subsection=\count186
-\c@subsubsection=\count187
-\c@paragraph=\count188
-\c@subparagraph=\count189
-\c@figure=\count190
-\c@table=\count191
+)
+\c@part=\count185
+\c@chapter=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\c@figure=\count192
+\c@table=\count193
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
-\bibindent=\dimen137
+\bibindent=\dimen138
 )
 (/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2020/02/08 v1.2c extra appendix facilities
-\c@@pps=\count192
-\c@@ppsavesec=\count193
-\c@@ppsaveapp=\count194
+\c@@pps=\count194
+\c@@ppsavesec=\count195
+\c@@ppsaveapp=\count196
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-\lst@mode=\count195
+\lst@mode=\count197
 \lst@gtempboxa=\box50
 \lst@token=\toks17
-\lst@length=\count196
-\lst@currlwidth=\dimen138
-\lst@column=\count197
-\lst@pos=\count198
-\lst@lostspace=\dimen139
-\lst@width=\dimen140
-\lst@newlines=\count199
-\lst@lineno=\count266
-\lst@maxwidth=\dimen141
+\lst@length=\count198
+\lst@currlwidth=\dimen139
+\lst@column=\count199
+\lst@pos=\count266
+\lst@lostspace=\dimen140
+\lst@width=\dimen141
+\lst@newlines=\count267
+\lst@lineno=\count268
+\lst@maxwidth=\dimen142
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count267
-\lst@skipnumbers=\count268
+\c@lstnumber=\count269
+\lst@skipnumbers=\count270
 \lst@framebox=\box51
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
@@ -110,46 +70,46 @@ Package: amstext 2021/08/26 v2.01 AMS text
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks18
-\ex@=\dimen142
+\ex@=\dimen143
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen143
+\pmbraise@=\dimen144
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2021/08/26 v2.02 operator names
 )
-\inf@bad=\count269
-LaTeX Info: Redefining \frac on input line 236.
-\uproot@=\count270
-\leftroot@=\count271
+\inf@bad=\count271
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count272
+\leftroot@=\count273
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count272
-\DOTSCASE@=\count273
+\classnum@=\count274
+\DOTSCASE@=\count275
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
 \Mathstrutbox@=\box52
 \strutbox@=\box53
-\big@size=\dimen144
+\big@size=\dimen145
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count274
-\c@MaxMatrixCols=\count275
+\macc@depth=\count276
+\c@MaxMatrixCols=\count277
 \dotsspace@=\muskip16
-\c@parentequation=\count276
-\dspbrk@lvl=\count277
+\c@parentequation=\count278
+\dspbrk@lvl=\count279
 \tag@help=\toks19
-\row@=\count278
-\column@=\count279
-\maxfields@=\count280
+\row@=\count280
+\column@=\count281
+\maxfields@=\count282
 \andhelp@=\toks20
-\eqnshift@=\dimen145
-\alignsep@=\dimen146
-\tagshift@=\dimen147
-\tagwidth@=\dimen148
-\totwidth@=\dimen149
-\lineht@=\dimen150
+\eqnshift@=\dimen146
+\alignsep@=\dimen147
+\tagshift@=\dimen148
+\tagwidth@=\dimen149
+\totwidth@=\dimen150
+\lineht@=\dimen151
 \@envbody=\toks21
 \multlinegap=\skip50
 \multlinetaggap=\skip51
@@ -174,10 +134,10 @@ Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: luatex.def on input line 227.
+Package xcolor Info: Driver file: pdftex.def on input line 227.
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/luatex.def
-File: luatex.def 2021/06/01 v1.2c Graphics/color driver for luatex
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 )
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
@@ -201,10 +161,10 @@ Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: luatex.def on input line 107.
+Package graphics Info: Driver file: pdftex.def on input line 107.
 )
-\Gin@req@height=\dimen151
-\Gin@req@width=\dimen152
+\Gin@req@height=\dimen152
+\Gin@req@width=\dimen153
 )
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
@@ -215,7 +175,7 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip52
 \bibsep=\skip53
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count281
+\c@NAT@ctr=\count283
 )
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
@@ -226,17 +186,17 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-\Gm@cnth=\count282
-\Gm@cntv=\count283
-\c@Gm@tempcnt=\count284
-\Gm@bindingoffset=\dimen153
-\Gm@wd@mp=\dimen154
-\Gm@odd@mp=\dimen155
-\Gm@even@mp=\dimen156
-\Gm@layoutwidth=\dimen157
-\Gm@layoutheight=\dimen158
-\Gm@layouthoffset=\dimen159
-\Gm@layoutvoffset=\dimen160
+\Gm@cnth=\count284
+\Gm@cntv=\count285
+\c@Gm@tempcnt=\count286
+\Gm@bindingoffset=\dimen154
+\Gm@wd@mp=\dimen155
+\Gm@odd@mp=\dimen156
+\Gm@even@mp=\dimen157
+\Gm@layoutwidth=\dimen158
+\Gm@layoutheight=\dimen159
+\Gm@layouthoffset=\dimen160
+\Gm@layoutvoffset=\dimen161
 \Gm@dimlist=\toks23
 ) (./mcode.sty
 -- Package: `mcode' 2.7 <2015/11/11> --
@@ -247,16 +207,14 @@ Package: mcode 2015/11/11 2.7
  - automatic line breaking enabled (careful, buggy!)
  - framed listings
 \lbreakdots=\box54
-LaTeX Font Info:    Trying to load font information for TU+pcr on input line 23
-0.
-LaTeX Font Info:    No file TUpcr.fd. on input line 230.
-
-LaTeX Font Warning: Font shape `TU/pcr/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 230.
-
-) (/usr/share/texlive/texmf-dist/tex/latex/cases/cases.sty
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 2
+30.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/cases/cases.sty
 Package: cases 2020/03/29 ver 3.2
-\numc@numwid=\dimen161
+\numc@numwid=\dimen162
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2021/04/25 v1.2e Bold Symbol Support (DPC/FMi)
@@ -270,9 +228,9 @@ LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
-\col@sep=\dimen162
+\col@sep=\dimen163
 \ar@mcellbox=\box55
-\extrarowheight=\dimen163
+\extrarowheight=\dimen164
 \NC@list=\toks24
 \extratabsurround=\skip54
 \backup@length=\skip55
@@ -282,14 +240,14 @@ Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip56
 \subfigcapskip=\skip57
-\subfigcaptopadj=\dimen164
+\subfigcaptopadj=\dimen165
 \subfigbottomskip=\skip58
-\subfigcapmargin=\dimen165
+\subfigcapmargin=\dimen166
 \subfiglabelskip=\skip59
-\c@subfigure=\count285
-\c@lofdepth=\count286
-\c@subtable=\count287
-\c@lotdepth=\count288
+\c@subfigure=\count287
+\c@lofdepth=\count288
+\c@subtable=\count289
+\c@lotdepth=\count290
 
 ****************************************
 * Local config file subfigure.cfg used *
@@ -298,13 +256,13 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfig@top=\skip60
 \subfig@bottom=\skip61
 )
-(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
-File: l3backend-luatex.def 2022-01-12 L3 backend support: PDF output (LuaTeX)
-\l__color_backend_stack_int=\count289
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count291
 \l__pdf_internal_box=\box57
 )
 (./structure.aux)
-\openout1 = structure.aux
+\openout1 = `structure.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
 LaTeX Font Info:    ... okay on input line 41.
@@ -315,32 +273,25 @@ LaTeX Font Info:    ... okay on input line 41.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
 LaTeX Font Info:    ... okay on input line 41.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 4
-1.
- (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
-File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 41.
 LaTeX Font Info:    ... okay on input line 41.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
 LaTeX Font Info:    ... okay on input line 41.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
 LaTeX Font Info:    ... okay on input line 41.
-\c@lstlisting=\count290
+\c@lstlisting=\count292
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count291
-\scratchdimen=\dimen166
+\scratchcounter=\count293
+\scratchdimen=\dimen167
 \scratchbox=\box58
-\nofMPsegments=\count292
-\nofMParguments=\count293
+\nofMPsegments=\count294
+\nofMParguments=\count295
 \everyMPshowfont=\toks25
-\MPscratchCnt=\count294
-\MPscratchDim=\dimen167
-\MPnumerator=\count295
-\makeMPintoPDFobject=\count296
+\MPscratchCnt=\count296
+\MPscratchDim=\dimen168
+\MPnumerator=\count297
+\makeMPintoPDFobject=\count298
 \everyMPtoPDFconversion=\toks26
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -352,9 +303,9 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 *geometry* driver: auto-detecting
-*geometry* detected driver: luatex
+*geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
-* driver: luatex
+* driver: pdftex
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -404,78 +355,78 @@ Chapter 1.
 File: plot/rigid_case/schematic_rigid_configuration.png Graphic file (type png)
 
 <use plot/rigid_case/schematic_rigid_configuration.png>
-Package luatex.def Info: plot/rigid_case/schematic_rigid_configuration.png  use
+Package pdftex.def Info: plot/rigid_case/schematic_rigid_configuration.png  use
 d on input line 49.
-(luatex.def)             Requested size: 298.75264pt x 212.77238pt.
-<plot/rigid_case/q_alpha_plot_with_point.png, id=9, 803.0pt x 803.0pt>
+(pdftex.def)             Requested size: 298.75264pt x 212.77238pt.
+<plot/rigid_case/q_alpha_plot_with_point.png, id=10, 803.0pt x 803.0pt>
 File: plot/rigid_case/q_alpha_plot_with_point.png Graphic file (type png)
 <use plot/rigid_case/q_alpha_plot_with_point.png>
-Package luatex.def Info: plot/rigid_case/q_alpha_plot_with_point.png  used on i
+Package pdftex.def Info: plot/rigid_case/q_alpha_plot_with_point.png  used on i
 nput line 60.
-(luatex.def)             Requested size: 170.71393pt x 170.70569pt.
-<plot/rigid_case/q_alpha_plot_with_point_four_equilibria.png, id=10, 1036.87375
+(pdftex.def)             Requested size: 170.71393pt x 170.70569pt.
+<plot/rigid_case/q_alpha_plot_with_point_four_equilibria.png, id=11, 1036.87375
 pt x 547.04375pt>
 File: plot/rigid_case/q_alpha_plot_with_point_four_equilibria.png Graphic file 
 (type png)
 <use plot/rigid_case/q_alpha_plot_with_point_four_equilibria.png>
-Package luatex.def Info: plot/rigid_case/q_alpha_plot_with_point_four_equilibri
+Package pdftex.def Info: plot/rigid_case/q_alpha_plot_with_point_four_equilibri
 a.png  used on input line 65.
-(luatex.def)             Requested size: 247.53976pt x 130.60036pt.
+(pdftex.def)             Requested size: 247.53976pt x 130.60036pt.
 [1
 
-<./plot/rigid_case/schematic_rigid_configuration.png>] [2<./plot/rigid_case/q_al
-pha_plot_with_point.png><./plot/rigid_case/q_alpha_plot_with_point_four_equilibr
-ia.png>]
+ <./plot/rigid_case/schematic_rigid_configuration.png>] [2 <./plot/rigid_case/q
+_alpha_plot_with_point.png> <./plot/rigid_case/q_alpha_plot_with_point_four_equ
+ilibria.png>]
 Chapter 2.
-<plot/rigid_case/schematic_rigid_configuration_color0_old.png, id=22, 877.2775p
+<plot/rigid_case/schematic_rigid_configuration_color0_old.png, id=23, 877.2775p
 t x 534.99875pt>
 File: plot/rigid_case/schematic_rigid_configuration_color0_old.png Graphic file
  (type png)
 <use plot/rigid_case/schematic_rigid_configuration_color0_old.png>
-Package luatex.def Info: plot/rigid_case/schematic_rigid_configuration_color0_o
+Package pdftex.def Info: plot/rigid_case/schematic_rigid_configuration_color0_o
 ld.png  used on input line 99.
-(luatex.def)             Requested size: 341.43437pt x 208.22417pt.
-<plot/fluid_general.png, id=23, 959.585pt x 649.42625pt>
+(pdftex.def)             Requested size: 341.43437pt x 208.22417pt.
+<plot/fluid_general.png, id=24, 959.585pt x 649.42625pt>
 File: plot/fluid_general.png Graphic file (type png)
 <use plot/fluid_general.png>
-Package luatex.def Info: plot/fluid_general.png  used on input line 109.
-(luatex.def)             Requested size: 341.43437pt x 231.07808pt.
-<plot/elastic_case/deformed_config.png, id=24, 972.63374pt x 663.47874pt>
+Package pdftex.def Info: plot/fluid_general.png  used on input line 109.
+(pdftex.def)             Requested size: 341.43437pt x 231.07808pt.
+<plot/elastic_case/deformed_config.png, id=25, 972.63374pt x 663.47874pt>
 File: plot/elastic_case/deformed_config.png Graphic file (type png)
 <use plot/elastic_case/deformed_config.png>
-Package luatex.def Info: plot/elastic_case/deformed_config.png  used on input l
+Package pdftex.def Info: plot/elastic_case/deformed_config.png  used on input l
 ine 119.
-(luatex.def)             Requested size: 341.43437pt x 232.90945pt.
+(pdftex.def)             Requested size: 341.43437pt x 232.90945pt.
 [3
 
-] [4<./plot/rigid_case/schematic_rigid_configuration_color0_old.png>]
-[5<./plot/fluid_general.png>] [6<./plot/elastic_case/deformed_config.png>]
+] [4 <./plot/rigid_case/schematic_rigid_configuration_color0_old.png>]
+[5 <./plot/fluid_general.png>] [6 <./plot/elastic_case/deformed_config.png>]
 [7] [8] [9] [10] [11] [12]
 Chapter 3.
 <plot/geometry.png, id=69, 1116.17pt x 204.765pt>
 File: plot/geometry.png Graphic file (type png)
 <use plot/geometry.png>
-Package luatex.def Info: plot/geometry.png  used on input line 557.
-(luatex.def)             Requested size: 426.79135pt x 78.29579pt.
+Package pdftex.def Info: plot/geometry.png  used on input line 557.
+(pdftex.def)             Requested size: 426.79135pt x 78.29579pt.
 <plot/fluid.png, id=70, 955.57pt x 647.41875pt>
 File: plot/fluid.png Graphic file (type png)
 <use plot/fluid.png>
-Package luatex.def Info: plot/fluid.png  used on input line 580.
-(luatex.def)             Requested size: 341.43437pt x 231.32202pt.
+Package pdftex.def Info: plot/fluid.png  used on input line 580.
+(pdftex.def)             Requested size: 341.43437pt x 231.32202pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [13
 
-<./plot/geometry.png>]
+ <./plot/geometry.png>]
 
 LaTeX Warning: Reference `fig:18' on page 14 undefined on input line 591.
 
 <plot/four_solutions2.png, id=75, 1204.5pt x 532.99126pt>
 File: plot/four_solutions2.png Graphic file (type png)
 <use plot/four_solutions2.png>
-Package luatex.def Info: plot/four_solutions2.png  used on input line 596.
-(luatex.def)             Requested size: 426.79135pt x 188.85944pt.
+Package pdftex.def Info: plot/four_solutions2.png  used on input line 596.
+(pdftex.def)             Requested size: 426.79135pt x 188.85944pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -487,10 +438,10 @@ elastic_beam_I_theta_q_0.40_alpha_0.230pi_initial_-4.80_refine2_15_new.png Grap
 hic file (type png)
 <use plot/RESLT_q_0.40_alpha_0.230pi_plot_step_refine2_new_recale_FSI/combine_e
 lastic_beam_I_theta_q_0.40_alpha_0.230pi_initial_-4.80_refine2_15_new.png>
-Package luatex.def Info: plot/RESLT_q_0.40_alpha_0.230pi_plot_step_refine2_new_
+Package pdftex.def Info: plot/RESLT_q_0.40_alpha_0.230pi_plot_step_refine2_new_
 recale_FSI/combine_elastic_beam_I_theta_q_0.40_alpha_0.230pi_initial_-4.80_refi
 ne2_15_new.png  used on input line 608.
-(luatex.def)             Requested size: 426.79135pt x 222.27763pt.
+(pdftex.def)             Requested size: 426.79135pt x 222.27763pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -503,10 +454,10 @@ g Graphic file (type png)
 <use plot/RESLT_q_0.40_alpha_0.180pi_plot_step_refine2_new_recale_FSI/combine_e
 lastic_beam_I_theta_q_0.400_alpha_0.180pi_initial_-4.80_refine2_rescale_FSI.png
 >
-Package luatex.def Info: plot/RESLT_q_0.40_alpha_0.180pi_plot_step_refine2_new_
+Package pdftex.def Info: plot/RESLT_q_0.40_alpha_0.180pi_plot_step_refine2_new_
 recale_FSI/combine_elastic_beam_I_theta_q_0.400_alpha_0.180pi_initial_-4.80_ref
 ine2_rescale_FSI.png  used on input line 618.
-(luatex.def)             Requested size: 426.79135pt x 213.39436pt.
+(pdftex.def)             Requested size: 426.79135pt x 213.39436pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -516,9 +467,9 @@ File: plot/RESLT_animation_varying_alpha_q_0.400_step_rescale_FSI/elastic_beam_
 I_theta_q_0.400_alpha_5.png Graphic file (type png)
 <use plot/RESLT_animation_varying_alpha_q_0.400_step_rescale_FSI/elastic_beam_I
 _theta_q_0.400_alpha_5.png>
-Package luatex.def Info: plot/RESLT_animation_varying_alpha_q_0.400_step_rescal
+Package pdftex.def Info: plot/RESLT_animation_varying_alpha_q_0.400_step_rescal
 e_FSI/elastic_beam_I_theta_q_0.400_alpha_5.png  used on input line 628.
-(luatex.def)             Requested size: 256.07741pt x 256.07692pt.
+(pdftex.def)             Requested size: 256.07741pt x 256.07692pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -531,11 +482,11 @@ dash_line.png Graphic file (type png)
 <use plot/RESLT_q_0.40_alpha_0.230pi_plot_step_refine2_new_recale_FSI/combine_e
 lastic_beam_I_theta_q_0.40_alpha_0.230pi_initial_-4.80_refine2_15_new_not_log_d
 ash_line.png>
-Package luatex.def Info: plot/RESLT_q_0.40_alpha_0.230pi_plot_step_refine2_new_
+Package pdftex.def Info: plot/RESLT_q_0.40_alpha_0.230pi_plot_step_refine2_new_
 recale_FSI/combine_elastic_beam_I_theta_q_0.40_alpha_0.230pi_initial_-4.80_refi
 ne2_15_new_not_log_dash_line.png  used on input line 640.
-(luatex.def)             Requested size: 341.43437pt x 227.61984pt.
-[14<./plot/fluid.png>]
+(pdftex.def)             Requested size: 341.43437pt x 227.61984pt.
+[14 <./plot/fluid.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -548,10 +499,10 @@ png Graphic file (type png)
 <use plot/RESLT_q_0.40_alpha_0.180pi_plot_step_refine2_new_recale_FSI/combine_e
 lastic_beam_I_theta_q_0.400_alpha_0.180pi_initial_-4.80_refine2_new_dash_line.p
 ng>
-Package luatex.def Info: plot/RESLT_q_0.40_alpha_0.180pi_plot_step_refine2_new_
+Package pdftex.def Info: plot/RESLT_q_0.40_alpha_0.180pi_plot_step_refine2_new_
 recale_FSI/combine_elastic_beam_I_theta_q_0.400_alpha_0.180pi_initial_-4.80_ref
 ine2_new_dash_line.png  used on input line 650.
-(luatex.def)             Requested size: 341.43437pt x 227.61984pt.
+(pdftex.def)             Requested size: 341.43437pt x 227.61984pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -561,9 +512,9 @@ File: plot/combine_elastic_beam_I_theta_q_0.452_alpha_0.125pi_initial_-4.80_0.p
 ng Graphic file (type png)
 <use plot/combine_elastic_beam_I_theta_q_0.452_alpha_0.125pi_initial_-4.80_0.pn
 g>
-Package luatex.def Info: plot/combine_elastic_beam_I_theta_q_0.452_alpha_0.125p
+Package pdftex.def Info: plot/combine_elastic_beam_I_theta_q_0.452_alpha_0.125p
 i_initial_-4.80_0.png  used on input line 660.
-(luatex.def)             Requested size: 426.79135pt x 284.534pt.
+(pdftex.def)             Requested size: 426.79135pt x 284.534pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -572,174 +523,166 @@ pt>
 File: plot/elastic_beam_I_theta_q_0.452_alpha_restart1.png Graphic file (type p
 ng)
 <use plot/elastic_beam_I_theta_q_0.452_alpha_restart1.png>
-Package luatex.def Info: plot/elastic_beam_I_theta_q_0.452_alpha_restart1.png  
+Package pdftex.def Info: plot/elastic_beam_I_theta_q_0.452_alpha_restart1.png  
 used on input line 670.
-(luatex.def)             Requested size: 199.94695pt x 199.94695pt.
+(pdftex.def)             Requested size: 199.94695pt x 199.94695pt.
 <plot/elastic_beam_I_theta_q_0.452_alpha_restart2.png, id=88, 1204.5pt x 1204.5
 pt>
 File: plot/elastic_beam_I_theta_q_0.452_alpha_restart2.png Graphic file (type p
 ng)
 <use plot/elastic_beam_I_theta_q_0.452_alpha_restart2.png>
-Package luatex.def Info: plot/elastic_beam_I_theta_q_0.452_alpha_restart2.png  
+Package pdftex.def Info: plot/elastic_beam_I_theta_q_0.452_alpha_restart2.png  
 used on input line 674.
-(luatex.def)             Requested size: 199.94695pt x 199.94695pt.
+(pdftex.def)             Requested size: 199.94695pt x 199.94695pt.
 <plot/elastic_beam_I_theta_q_0.452_alpha_restart3.png, id=89, 1204.5pt x 1204.5
 pt>
 File: plot/elastic_beam_I_theta_q_0.452_alpha_restart3.png Graphic file (type p
 ng)
 <use plot/elastic_beam_I_theta_q_0.452_alpha_restart3.png>
-Package luatex.def Info: plot/elastic_beam_I_theta_q_0.452_alpha_restart3.png  
+Package pdftex.def Info: plot/elastic_beam_I_theta_q_0.452_alpha_restart3.png  
 used on input line 678.
-(luatex.def)             Requested size: 199.94695pt x 199.94695pt.
+(pdftex.def)             Requested size: 199.94695pt x 199.94695pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <plot/geometry3.png, id=90, 1204.5pt x 135.50626pt>
 File: plot/geometry3.png Graphic file (type png)
 <use plot/geometry3.png>
-Package luatex.def Info: plot/geometry3.png  used on input line 695.
-(luatex.def)             Requested size: 426.79135pt x 48.0151pt.
+Package pdftex.def Info: plot/geometry3.png  used on input line 695.
+(pdftex.def)             Requested size: 426.79135pt x 48.0151pt.
 <plot/elastic_beam_alpha_theta_eq_q_0.400.png, id=91, 803.0pt x 803.0pt>
 File: plot/elastic_beam_alpha_theta_eq_q_0.400.png Graphic file (type png)
 <use plot/elastic_beam_alpha_theta_eq_q_0.400.png>
-Package luatex.def Info: plot/elastic_beam_alpha_theta_eq_q_0.400.png  used on 
+Package pdftex.def Info: plot/elastic_beam_alpha_theta_eq_q_0.400.png  used on 
 input line 701.
-(luatex.def)             Requested size: 256.07741pt x 256.08305pt.
+(pdftex.def)             Requested size: 256.07741pt x 256.08305pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <plot/RESLT_q_alpha_plot/elastic_beam_general.png, id=92, 803.0pt x 803.0pt>
 File: plot/RESLT_q_alpha_plot/elastic_beam_general.png Graphic file (type png)
 <use plot/RESLT_q_alpha_plot/elastic_beam_general.png>
-Package luatex.def Info: plot/RESLT_q_alpha_plot/elastic_beam_general.png  used
+Package pdftex.def Info: plot/RESLT_q_alpha_plot/elastic_beam_general.png  used
  on input line 711.
-(luatex.def)             Requested size: 256.07741pt x 256.08305pt.
+(pdftex.def)             Requested size: 256.07741pt x 256.08305pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <plot/tensile_boomerang.png, id=93, 650.43pt x 283.0575pt>
 File: plot/tensile_boomerang.png Graphic file (type png)
 <use plot/tensile_boomerang.png>
-Package luatex.def Info: plot/tensile_boomerang.png  used on input line 721.
-(luatex.def)             Requested size: 213.39568pt x 92.86505pt.
+Package pdftex.def Info: plot/tensile_boomerang.png  used on input line 721.
+(pdftex.def)             Requested size: 213.39568pt x 92.86505pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[15<./plot/four_solutions2.png><./plot/geometry3.png>] [16<./plot/RESLT_q_0.40_a
-lpha_0.230pi_plot_step_refine2_new_recale_FSI/combine_elastic_beam_I_theta_q_0.4
-0_alpha_0.230pi_initial_-4.80_refine2_15_new.png>] [17<./plot/RESLT_q_0.40_alpha
-_0.180pi_plot_step_refine2_new_recale_FSI/combine_elastic_beam_I_theta_q_0.400_a
-lpha_0.180pi_initial_-4.80_refine2_rescale_FSI.png>]
+[15 <./plot/four_solutions2.png> <./plot/geometry3.png>] [16 <./plot/RESLT_q_0.
+40_alpha_0.230pi_plot_step_refine2_new_recale_FSI/combine_elastic_beam_I_theta_
+q_0.40_alpha_0.230pi_initial_-4.80_refine2_15_new.png>] [17 <./plot/RESLT_q_0.4
+0_alpha_0.180pi_plot_step_refine2_new_recale_FSI/combine_elastic_beam_I_theta_q
+_0.400_alpha_0.180pi_initial_-4.80_refine2_rescale_FSI.png>]
 <plot/tensile_stress/sigma_q_0.35_alpha_0.125pi.png, id=103, 602.25pt x 602.25p
 t>
 File: plot/tensile_stress/sigma_q_0.35_alpha_0.125pi.png Graphic file (type png
 )
 <use plot/tensile_stress/sigma_q_0.35_alpha_0.125pi.png>
-Package luatex.def Info: plot/tensile_stress/sigma_q_0.35_alpha_0.125pi.png  us
+Package pdftex.def Info: plot/tensile_stress/sigma_q_0.35_alpha_0.125pi.png  us
 ed on input line 786.
-(luatex.def)             Requested size: 128.0387pt x 128.03845pt.
+(pdftex.def)             Requested size: 128.0387pt x 128.03845pt.
 <plot/tensile_stress/sigma_q_0.40_alpha_0.125pi.png, id=104, 602.25pt x 602.25p
 t>
 File: plot/tensile_stress/sigma_q_0.40_alpha_0.125pi.png Graphic file (type png
 )
 <use plot/tensile_stress/sigma_q_0.40_alpha_0.125pi.png>
-Package luatex.def Info: plot/tensile_stress/sigma_q_0.40_alpha_0.125pi.png  us
+Package pdftex.def Info: plot/tensile_stress/sigma_q_0.40_alpha_0.125pi.png  us
 ed on input line 792.
-(luatex.def)             Requested size: 128.0387pt x 128.03845pt.
+(pdftex.def)             Requested size: 128.0387pt x 128.03845pt.
 <plot/tensile_stress/sigma_q_0.45_alpha_0.125pi.png, id=105, 602.25pt x 602.25p
 t>
 File: plot/tensile_stress/sigma_q_0.45_alpha_0.125pi.png Graphic file (type png
 )
 <use plot/tensile_stress/sigma_q_0.45_alpha_0.125pi.png>
-Package luatex.def Info: plot/tensile_stress/sigma_q_0.45_alpha_0.125pi.png  us
+Package pdftex.def Info: plot/tensile_stress/sigma_q_0.45_alpha_0.125pi.png  us
 ed on input line 798.
-(luatex.def)             Requested size: 128.0387pt x 128.03845pt.
+(pdftex.def)             Requested size: 128.0387pt x 128.03845pt.
 <plot/tensile_stress/sigma_q_0.35_alpha_0.250pi.png, id=106, 602.25pt x 602.25p
 t>
 File: plot/tensile_stress/sigma_q_0.35_alpha_0.250pi.png Graphic file (type png
 )
 <use plot/tensile_stress/sigma_q_0.35_alpha_0.250pi.png>
-Package luatex.def Info: plot/tensile_stress/sigma_q_0.35_alpha_0.250pi.png  us
+Package pdftex.def Info: plot/tensile_stress/sigma_q_0.35_alpha_0.250pi.png  us
 ed on input line 805.
-(luatex.def)             Requested size: 128.0387pt x 128.03845pt.
+(pdftex.def)             Requested size: 128.0387pt x 128.03845pt.
 <plot/tensile_stress/sigma_q_0.40_alpha_0.250pi.png, id=107, 602.25pt x 602.25p
 t>
 File: plot/tensile_stress/sigma_q_0.40_alpha_0.250pi.png Graphic file (type png
 )
 <use plot/tensile_stress/sigma_q_0.40_alpha_0.250pi.png>
-Package luatex.def Info: plot/tensile_stress/sigma_q_0.40_alpha_0.250pi.png  us
+Package pdftex.def Info: plot/tensile_stress/sigma_q_0.40_alpha_0.250pi.png  us
 ed on input line 811.
-(luatex.def)             Requested size: 128.0387pt x 128.03845pt.
+(pdftex.def)             Requested size: 128.0387pt x 128.03845pt.
 <plot/tensile_stress/sigma_q_0.45_alpha_0.250pi.png, id=108, 602.25pt x 602.25p
 t>
 File: plot/tensile_stress/sigma_q_0.45_alpha_0.250pi.png Graphic file (type png
 )
 <use plot/tensile_stress/sigma_q_0.45_alpha_0.250pi.png>
-Package luatex.def Info: plot/tensile_stress/sigma_q_0.45_alpha_0.250pi.png  us
+Package pdftex.def Info: plot/tensile_stress/sigma_q_0.45_alpha_0.250pi.png  us
 ed on input line 817.
-(luatex.def)             Requested size: 128.0387pt x 128.03845pt.
+(pdftex.def)             Requested size: 128.0387pt x 128.03845pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-(./structure.bbl [18<./plot/RESLT_animation_varying_alpha_q_0.400_step_rescale_F
-SI/elastic_beam_I_theta_q_0.400_alpha_5.png>] [19<./plot/RESLT_q_0.40_alpha_0.23
-0pi_plot_step_refine2_new_recale_FSI/combine_elastic_beam_I_theta_q_0.40_alpha_0
-.230pi_initial_-4.80_refine2_15_new_not_log_dash_line.png>] [20<./plot/RESLT_q_0
-.40_alpha_0.180pi_plot_step_refine2_new_recale_FSI/combine_elastic_beam_I_theta_
-q_0.400_alpha_0.180pi_initial_-4.80_refine2_new_dash_line.png>] [21<./plot/combi
-ne_elastic_beam_I_theta_q_0.452_alpha_0.125pi_initial_-4.80_0.png>]
-[22<./plot/elastic_beam_I_theta_q_0.452_alpha_restart1.png><./plot/elastic_beam_
-I_theta_q_0.452_alpha_restart2.png><./plot/elastic_beam_I_theta_q_0.452_alpha_re
-start3.png>] [23<./plot/elastic_beam_alpha_theta_eq_q_0.400.png><./plot/RESLT_q_
-alpha_plot/elastic_beam_general.png>] [24<./plot/tensile_boomerang.png><./plot/t
-ensile_stress/sigma_q_0.35_alpha_0.125pi.png><./plot/tensile_stress/sigma_q_0.40
-_alpha_0.125pi.png><./plot/tensile_stress/sigma_q_0.45_alpha_0.125pi.png><./plot
-/tensile_stress/sigma_q_0.35_alpha_0.250pi.png><./plot/tensile_stress/sigma_q_0.
-40_alpha_0.250pi.png><./plot/tensile_stress/sigma_q_0.45_alpha_0.250pi.png>]) [
-25
+(./structure.bbl [18 <./plot/RESLT_animation_varying_alpha_q_0.400_step_rescale
+_FSI/elastic_beam_I_theta_q_0.400_alpha_5.png>] [19 <./plot/RESLT_q_0.40_alpha_
+0.230pi_plot_step_refine2_new_recale_FSI/combine_elastic_beam_I_theta_q_0.40_al
+pha_0.230pi_initial_-4.80_refine2_15_new_not_log_dash_line.png>] [20 <./plot/RE
+SLT_q_0.40_alpha_0.180pi_plot_step_refine2_new_recale_FSI/combine_elastic_beam_
+I_theta_q_0.400_alpha_0.180pi_initial_-4.80_refine2_new_dash_line.png>]
+[21 <./plot/combine_elastic_beam_I_theta_q_0.452_alpha_0.125pi_initial_-4.80_0.
+png>] [22 <./plot/elastic_beam_I_theta_q_0.452_alpha_restart1.png> <./plot/elas
+tic_beam_I_theta_q_0.452_alpha_restart2.png> <./plot/elastic_beam_I_theta_q_0.4
+52_alpha_restart3.png>] [23 <./plot/elastic_beam_alpha_theta_eq_q_0.400.png> <.
+/plot/RESLT_q_alpha_plot/elastic_beam_general.png>] [24 <./plot/tensile_boomera
+ng.png> <./plot/tensile_stress/sigma_q_0.35_alpha_0.125pi.png> <./plot/tensile_
+stress/sigma_q_0.40_alpha_0.125pi.png> <./plot/tensile_stress/sigma_q_0.45_alph
+a_0.125pi.png> <./plot/tensile_stress/sigma_q_0.35_alpha_0.250pi.png> <./plot/t
+ensile_stress/sigma_q_0.40_alpha_0.250pi.png> <./plot/tensile_stress/sigma_q_0.
+45_alpha_0.250pi.png>]) [25
 
 ] (./structure.aux)
 
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
 LaTeX Warning: There were undefined references.
 
-)
-
-Here is how much of LuaTeX's memory you used:
- 6605 strings out of 477805
- 100000,460012 words of node,token memory allocated
- 1306 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 4 glyph, 190 attribute, 60 glue_spe
-c, 190 attribute_list, 1 write, 4 pdf_colorstack nodes
-   avail lists: 2:881,3:275,4:60,5:462,6:42,7:6376,8:64,9:1048,10:23,11:380
- 26887 multiletter control sequences out of 65536+600000
- 91 fonts using 6340087 bytes
- 55i,16n,59p,948b,365s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf/fonts/opentype/public/lm/lmroman12-italic.otf></usr/share/texm
-f/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf/fonts/opentyp
-e/public/lm/lmmono12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmro
-man12-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-regular.otf>
-</usr/share/texmf/fonts/opentype/public/lm/lmroman17-regular.otf></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on structure.pdf (26 pages, 1843581 bytes).
-
-PDF statistics: 221 PDF objects out of 1000 (max. 8388607)
- 123 compressed objects within 2 object streams
- 0 named destinations out of 1000 (max. 131072)
- 1 words of extra memory for PDF output out of 10000 (max. 100000000)
+ ) 
+Here is how much of TeX's memory you used:
+ 6324 strings out of 480171
+ 100187 string characters out of 5894489
+ 397081 words of memory out of 5000000
+ 24159 multiletter control sequences out of 15000+600000
+ 486053 words of font info for 90 fonts, out of 8000000 for 9000
+ 59 hyphenation exceptions out of 8191
+ 55i,16n,62p,946b,341s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on structure.pdf (26 pages, 1859944 bytes).
+PDF statistics:
+ 211 PDF objects out of 1000 (max. 8388607)
+ 111 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 141 words of extra memory for PDF output out of 10000 (max. 10000000)
 
