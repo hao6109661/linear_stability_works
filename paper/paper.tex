@@ -1,52 +1,43 @@
-\documentclass[a4paper,12pt]{report}
-\usepackage[title]{appendix}
-\usepackage{listings,amsmath,amssymb,xcolor,graphicx,url,natbib}
-\usepackage{amsfonts}
-\usepackage[inner=3cm,outer=3cm,top=3cm,bottom=3cm]{geometry}
-\definecolor{lgrey}{HTML}{808080}
-\definecolor{dgrey}{HTML}{404040}
-\usepackage[framed,numbered,autolinebreaks,useliterate]{mcode}
-\usepackage{cases}
-\usepackage{color}
-\usepackage{bm}
-\bibliographystyle{abbrv}
-\usepackage{array}
+%\documentclass[lineno]{jfm}
+\documentclass[lineno]{JFM-FLM_Au}
 \usepackage{subfigure}
 
+%\usepackage{showframe}
 
-% \inline is a custom macro
-\def\inline{\lstinline[basicstyle=\ttfamily]}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
 
-% \includecode is a custom macro
-% usage is:
-% \includecode{title}{filename}
-% where 'title' is the displayed title of the file (usually its name)
-%   and 'filename' is the full filename, including the path relative to the LaTeX document
-% See example below in the appendix
-\newcommand{\includecode}[2]{\subsection{\lstinline[basicstyle=\ttfamily\large]{#1}}\lstinputlisting{#2}}
+\lefttitle{Author 1 et al.}
+\righttitle{Journal of Fluid Mechanics}
 
+\title{JFM {\LaTeX} submission template}
 
+\author{Author 1\aff{1}, Author 2\aff{1} \and Author 3\aff{2}}
 
-% Document title: uncomment the appropriate title
-\title{Summery}
-%\title{Coursework 2}
-%\title{Coursework 3}
-%\title{Project 1: (Project name)} % add the name of the project
-%\title{Project 2: (Project name)} % add the name of the project
+\affiliation{\aff{1}Department, Institution, City, Country
+\aff{2}Department, Institution, City, Country}
 
-\author{Hao Ye} % your student number here
-%\date{2023.4.20}
-
+\corresau{Author 1, email}
 
 \begin{document}
 \maketitle
-%% Document body starts here
-\chapter{Rigid case}
+
+\begin{abstract}
+This file contains information for authors planning to submit a paper to the {\it Journal of Fluid Mechanics}. The document was generated in {\LaTeX} using the JFM class file and supporting files provided on the JFM website \href{https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/information/author-instructions/preparing-your-materials}{here}, and the source files can be used as a template for submissions (please note that this is mandatory for {\it JFM Rapids}). Full author instructions can be found on the \href{https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/information/author-instructions}{JFM website}. The present paragraph appears in the \verb}abstract} environment. All papers should feature a single-paragraph abstract of no more than 250 words which must not spill onto the second page of the manuscript.
+\end{abstract}
+
+\begin{keywords}
+Authors should not enter keywords on the manuscript, as these must be chosen by the author during the online submission process and will then be added during the typesetting process (see \href{https://www.cambridge.org/core/services/aop-file-manager/file/61436b61ff7f3cfab749ce3a/JFM-Keywords-Sept-2021.pdf.}{Keyword PDF} for the full list).  Other classifications will be added at the same time.
+\end{keywords}
+
+%{\bf MSC Codes }  {\it(Optional)} Please enter your MSC Codes here
+
+\section{Rigid case}
 \begin{figure}[htb]
 	\begin{center}
 		% specify width as 80% of the width of the text on the page
 		% we can also specify a width in centimetres, e.g. [width=8cm]
-		\includegraphics[width=0.7\textwidth]{plot/rigid_case/schematic_rigid_configuration.png}
+		\includegraphics[width=0.5\textwidth]{plot/rigid_case/schematic_rigid_configuration.png}
 		\caption{Schematics of the geometry of boomerang-shaped rigid fibres.}
 		\label{fig:21}
 	\end{center}
@@ -65,18 +56,18 @@
 		\includegraphics[width=\linewidth]{plot/rigid_case/q_alpha_plot_with_point_four_equilibria.png}
 	\end{minipage}
 	\caption{Left: Two regions in $q-\alpha$ parameter space indicate distinct types of motion for rigid fibres. Right: The case corresponding to the red point in the left plot. In the grey region, there exist four equilibria in total—two stable and two unstable. The two stable equilibria differ by an angle of $\pi$, drifting at the same speed but in opposite directions; the same applies to the two unstable ones.}
+	\label{fig:18}
 \end{figure}
 
 
+\section{Theoretical Framework}
 
-\chapter{Theoretical Framework}
-
-\section{Fluid-solid interaction}
-Generally speaking, we will investigate a two-dimensional problem concerning the deformation and motion of a slender elastic particle in shear flow at a low Reynolds number, focussing on the particle's orientation and trajectory when it reaches equilibrium in the fluid. As this project concerns both fluid and solid mechanics, we will introduce these two components separately and then couple them to discuss the fluid-solid interaction.
-\subsection{Fluid mechanics}
-We set the undeformed slender elastic particle clamped at the origin of the laboratory reference frame $\{\mathbf{e'_1}, \mathbf{e'_2}, \mathbf{e'_3}\}$ as
+\subsection{Fluid-solid interaction}
+Generally speaking, we will investigate a two-dimensional problem concerning the deformation and motion of a slender elastic fibre in shear flow at a low Reynolds number, focussing on the fibre's orientation and trajectory in the fluid. As this project concerns both fluid and solid mechanics, we will introduce these two components separately and then couple them to discuss the fluid-solid interaction.
+\subsubsection{Fluid mechanics}
+We set the undeformed slender elastic fibre clamped at the origin of the laboratory reference frame $\{\mathbf{e'_1}, \mathbf{e'_2}, \mathbf{e'_3}\}$ as
 $\mathbf{r}_0^*(\xi^*)=(0,\xi^*)^T$, where $\xi^*\in [0,\mathcal{L}]$. We then assume that its deformed state is given by $\mathbf{R}_0^*(\xi^*,t^*)$. 
-Final position of the deformed particle after translation and rotation is determined as follows:
+Final position of the deformed fibre after translation and rotation is determined as follows:
 \begin{equation}
 	\label{eqn:19}
 	\mathbf{R}^*(\xi^*,t^*)=\mathbf{\mathcal{R}}\,\mathbf{R}_0^*(\xi^*,t^*)+\mathbf{r}_b^*(t^*),
@@ -84,10 +75,10 @@ Final position of the deformed particle after translation and rotation is determ
 where $\mathbf{\mathcal{R}}=\left(\begin{aligned}
 	&\cos(\phi(t^*))\quad -\sin(\phi(t^*)) \\
 	&\sin(\phi(t^*))\quad \cos(\phi(t^*))
-\end{aligned}\right)$ is the rotation matrix with $\phi(t^*)$ which measures the particle's inclination as shown in Figure \ref{fig:5}, and $\mathbf{r}_b^*(t^*)=\left(\begin{aligned}
-&X(t^*) \\
-&Y(t^*)
-\end{aligned}\right)$ represents the translation of the particle. Note that inclination $\phi(t^*)$ refers to the actual rotational angle of the object. From Figure \ref{fig:5}, we can easily derive the relationship between orientation and inclination as follows:
+\end{aligned}\right)$ is the rotation matrix with $\phi(t^*)$ which measures the fibre's inclination as shown in Figure \ref{fig:5}, and $\mathbf{r}_b^*(t^*)=\left(\begin{aligned}
+	&X(t^*) \\
+	&Y(t^*)
+\end{aligned}\right)$ represents the translation of the fibre. Note that inclination $\phi(t^*)$ refers to the actual rotational angle of the object. From Figure \ref{fig:5}, we can easily derive the relationship between orientation and inclination as follows:
 \begin{equation}
 	\label{eqn:20}
 	\theta(t^*)=\frac{\pi}{2}-\phi(t^*).
@@ -96,8 +87,8 @@ where $\mathbf{\mathcal{R}}=\left(\begin{aligned}
 	\begin{center}
 		% specify width as 80% of the width of the text on the page
 		% we can also specify a width in centimetres, e.g. [width=8cm]
-		\includegraphics[width=0.8\textwidth]{plot/rigid_case/schematic_rigid_configuration_color0_old.png}
-		\caption{Schematic of a slender elastic particle in the deformed state in shear flow. The dashed black line represents its undeformed configuration.}
+		\includegraphics[width=0.5\textwidth]{plot/rigid_case/schematic_rigid_configuration_color0_old.png}
+		\caption{Schematics of the geometry of boomerang-shaped rigid fibres.}
 		\label{fig:23}
 	\end{center}
 	%	\setlength{\abovecaptionskip}{-0.5 cm}
@@ -107,32 +98,22 @@ where $\mathbf{\mathcal{R}}=\left(\begin{aligned}
 		% specify width as 80% of the width of the text on the page
 		% we can also specify a width in centimetres, e.g. [width=8cm]
 		\includegraphics[width=0.8\textwidth]{plot/fluid_general.png}
-		\caption{Schematic of a slender elastic particle in the deformed state in shear flow. The dashed black line represents its undeformed configuration.}
+		\caption{Schematic of a slender elastic fibre in the deformed state in shear flow. The dashed black line represents its undeformed configuration.}
 		\label{fig:5}
 	\end{center}
 	%	\setlength{\abovecaptionskip}{-0.5 cm}
 \end{figure}
-\begin{figure}[htb]
-	\begin{center}
-		% specify width as 80% of the width of the text on the page
-		% we can also specify a width in centimetres, e.g. [width=8cm]
-		\includegraphics[width=0.8\textwidth]{plot/elastic_case/deformed_config.png}
-		\caption{Schematic of a slender elastic particle in the deformed state in shear flow. The dashed black line represents its undeformed configuration.}
-		\label{fig:22}
-	\end{center}
-	%	\setlength{\abovecaptionskip}{-0.5 cm}
-\end{figure}
-Since we consider a slender elastic particle immersed in shear flow, the velocity of the background flow is given by
+Since we consider a slender elastic fibre immersed in shear flow, the velocity of the background flow is given by
 \begin{equation}
 	\label{eqn:21}
 	\mathbf{U}^{\infty*}(\mathbf{R}^*(\xi^*,t^*))=\dot{\gamma}\left(\mathbf{R}^*(\xi^*,t^*)\cdot\mathbf{e}_y\right)\cdot\mathbf{e}_x,
 \end{equation}
-where $\mathbf{e}_x=(1,0)^T$ and $\mathbf{e}_y=(0,1)^T$ are both unit vectors. Then, the particle's velocity from kinematics is 
+where $\mathbf{e}_x=(1,0)^T$ and $\mathbf{e}_y=(0,1)^T$ are both unit vectors. Then, the fibre's velocity from kinematics is 
 \begin{equation}
 	\label{eqn:22}
 	\mathbf{U}^*=\frac{\partial\mathbf{R}^*(\xi^*,t^*)}{\partial t^*}.
 \end{equation}
-Let us define a tangential vector to surface of the particle:
+Let us define a tangential vector to surface of the fibre:
 \begin{equation}
 	\label{eqn:23}
 	\mathbf{e}_t=\frac{1}{|\frac{\partial\mathbf{R}^*(\xi^*,t^*)}{\partial\xi^*}|}\frac{\partial\mathbf{R}^*(\xi^*,t^*)}{\partial\xi^*}.
@@ -145,7 +126,7 @@ From the slender body theory, the traction is obtained as flows:
 where $c_\perp=\frac{4\pi\mu}{\ln{\frac{1}{\epsilon}}}$ is the drag coefficient. 
 
 We non-dimensionalise the variables mentioned in this section using the following basic relationships (we set the total length
-of the particle as the characteristic length $\mathcal{L}$ and define the time scale as $\frac{1}{\dot{\gamma}}$ , where $\dot{\gamma}$ is the shear rate.) :
+of the fibre as the characteristic length $\mathcal{L}$ and define the time scale as $\frac{1}{\dot{\gamma}}$ , where $\dot{\gamma}$ is the shear rate.) :
 \begin{equation}
 	\label{eqn:25}
 	\xi^*=\mathcal{L}\xi, \quad t^*=\frac{1}{\dot{\gamma}}\,t.
@@ -168,16 +149,13 @@ where
 \begin{equation}
 	\label{eqn:101}
 	\begin{aligned}
-	\mathbf{f}_f=&\left(\mathbf{I}-\frac{1}{2}\mathbf{e}_t\mathbf{e}_t\right)\cdot(\mathbf{U}^{\infty}(t)-\mathbf{U}(t))\\
-	=&\left(\mathbf{I}-\frac{1}{2}\mathbf{e}_t\mathbf{e}_t\right)\cdot\Big((\mathbf{\mathbf{R}}(\xi,t)\cdot\mathbf{e}_y)\cdot\mathbf{e}_x-\frac{\partial\mathbf{R}(\xi,t)}{\partial t}\Big)
+		\mathbf{f}_f=&\left(\mathbf{I}-\frac{1}{2}\mathbf{e}_t\mathbf{e}_t\right)\cdot(\mathbf{U}^{\infty}(t)-\mathbf{U}(t))\\
+		=&\left(\mathbf{I}-\frac{1}{2}\mathbf{e}_t\mathbf{e}_t\right)\cdot\Big((\mathbf{\mathbf{R}}(\xi,t)\cdot\mathbf{e}_y)\cdot\mathbf{e}_x-\frac{\partial\mathbf{R}(\xi,t)}{\partial t}\Big)
 	\end{aligned}
 \end{equation}
 is the non-dimensional fluid traction. 
 
-
-
-
-\subsection{Solid mechanics}
+\subsubsection{Solid mechanics}
 We are considering the fluid-solid interaction, so next we will focus on the part related to solid mechanics. This report employs geometrically nonlinear Kirchhoff-Love beam theory with incrementally linear constitutive equations to describe the deformation issues of elastic beams subjected to forces in fluid. We define the deformation of the beam as the dimensionless centreline displacement, $\mathbf{\omega} = \frac{\mathbf{\omega}^*}{\mathcal{L}}$. The position of a material point on the beam's centerline is denoted by 
 \begin{equation}
 	\label{eqn:61}
@@ -212,7 +190,7 @@ We then give the non-dimensional equation by scaling the stresses and the applie
 		&\mathbf{f^*} \\
 		&\mathbf{\sigma}_0^*
 	\end{aligned}\right)
-	=\kappa\left(\begin{aligned}
+	=\frac{K}{\mathcal{L}^3}\left(\begin{aligned}
 		&\mathbf{f}_{s} \\
 		&\mathbf{\sigma}_0
 	\end{aligned}\right),
@@ -250,13 +228,13 @@ Since the elastic beam is initially clamped at the origin, the boundary conditio
 \begin{equation}
 	\label{eqn:58}
 	\begin{aligned}
-	&\mathbf{R}_0(\xi=0)\cdot\mathbf{e}_x=0,\\
-	&\mathbf{R}_0(\xi=0)\cdot\mathbf{e}_y=0,\\
-	&\frac{d\left(\mathbf{R}_0(\xi=0)\cdot\mathbf{e}_x\right)}{d\xi}=0.
+		&\mathbf{R}_0(\xi=0)\cdot\mathbf{e}_x=0,\\
+		&\mathbf{R}_0(\xi=0)\cdot\mathbf{e}_y=0,\\
+		&\frac{d\left(\mathbf{R}_0(\xi=0)\cdot\mathbf{e}_x\right)}{d\xi}=0.
 	\end{aligned}
 \end{equation}
 
-\subsection{Fluid–solid coupling}
+\subsubsection{Fluid–solid coupling}
 The no-slip boundary condition requires that the velocity of the fluid on the surface of the beam matches the velocity of the beam at that location. Hence, the boundary condition is 
 \begin{equation}
 	\label{eqn:100}
@@ -286,9 +264,7 @@ Then, we define the coefficient in \eqref{eqn:37} as $\mathcal{I}$, which repres
 It quantifies the degree or strength of the interaction between the fluid and the solid within the system.
 
 
-
-
-\section{Governing equations}
+\subsection{Governing equations}
 Initially, the elastic beam is clamped at the origin, denoted by $\mathbf{r}_0(\xi)=(0,\xi)^T,\,\xi\in [0,1]$. Next, a traction $\mathbf{f}_s=\mathcal{I}\,\mathbf{f}_0$  is applied to it, causing deformation denoted as $\mathbf{R}_0(\xi,t)$. Substituting 
 $\mathbf{r}_0(\xi), \mathbf{f}_s$ and $\mathbf{R}_0(\xi,t)$ into the beam's governing equation $\eqref{eqn:31}$, we obtain the following equation:
 \begin{equation}
@@ -302,7 +278,7 @@ $\mathbf{R}_0(\xi,t)$, yielding $\mathbf{R}(\xi,t)$ as:
 	\label{eqn:49}
 	\mathbf{R}(\xi,t)=\mathbf{\mathcal{R}}(t)\,\mathbf{R}_0(\xi,t)+\mathbf{r}_b(t).
 \end{equation}
- We compute the fluid traction $\mathbf{f}_f$ acting on the beam $\mathbf{R}(\xi,t)$ based on $\eqref{eqn:101}$. Then, we rotate this fluid traction $\mathbf{f}_f$ back by angle $\phi(t)$ while keeping its magnitude unchanged, obtaining traction $\mathbf{f}_0$. Hence, the relationship between $\mathbf{f}_0$ and $\mathbf{f}_f$ is 
+We compute the fluid traction $\mathbf{f}_f$ acting on the beam $\mathbf{R}(\xi,t)$ based on $\eqref{eqn:101}$. Then, we rotate this fluid traction $\mathbf{f}_f$ back by angle $\phi(t)$ while keeping its magnitude unchanged, obtaining traction $\mathbf{f}_0$. Hence, the relationship between $\mathbf{f}_0$ and $\mathbf{f}_f$ is 
 \begin{equation}
 	\label{eqn:50}
 	\mathbf{f}_0=\mathbf{\mathcal{R}}^{-1}\,\mathbf{f}_f,
@@ -312,28 +288,28 @@ where $\mathbf{\mathcal{R}}^{-1}$ is the inverse of the rotation matrix. Then, t
 	\label{eqn:67}
 	\mathbf{f}_s=\mathcal{I}\,\mathbf{f}_0=\mathcal{I}\,\left(\mathbf{\mathcal{R}}^{-1}\,\mathbf{f}_f\right).
 \end{equation}
-Then $\eqref{eqn:48}$ can be updated by
+From $\eqref{eqn:19}$ and $\eqref{eqn:101}$, we know that the traction $\textbf{f}_f$ is the function of $\textbf{R}_0(\xi,t), X(t), Y(t)$ and $\phi(t)$. Thus, traction $\textbf{f}_0$ is also the function of these variables, that is, $\textbf{f}_0\left(\textbf{R}_0(\xi,t), X(t), Y(t),\phi(t)\right)$. It means that $\eqref{eqn:48}$ can be updated by
 \begin{equation}
 	\label{eqn:51}
 	\mathbf{\mathcal{S}}\Big(\mathbf{R}_0(\xi,t), X(t), Y(t),\phi(t);\mathbf{r}_0(\xi)\Big)=0.
 \end{equation}
 Note that $\mathbf{r}_0(\xi)=(0,\xi)^T,\,\xi\in [0,1]$ is not the unknown in this equation.
 
-The net drag and net torque acting on the beam $\mathbf{R}(t,\xi)$ in non-dimensional form are 
+The net drag and net torque acting on the beam $\mathbf{R}(\xi,t)$ in non-dimensional form are 
 \begin{equation}
 	\label{eqn:52}
 	\mathbf{F}=\int^1_0 \mathbf{f}\, \left|\frac{\partial\mathbf{R}}{\partial\xi}\right|\,d\xi, 
 \end{equation}
 \begin{equation}
 	\label{eqn:53}
-	\mathbf{T}\cdot\mathbf{e}_z=\left\{\int^1_0 \left[(\mathbf{R}-\mathbf{R}_{centre})\times \mathbf{f}\,\right]\,\left|\frac{\partial\mathbf{R}}{\partial\xi}\right|\,d\xi\right\}\cdot\mathbf{e}_z,
+	\mathbf{T}\cdot\mathbf{e}_z=\left\{\int^1_0 \left[(\mathbf{R}-\mathbf{R}_c)\times \mathbf{f}\,\right]\,\left|\frac{\partial\mathbf{R}}{\partial\xi}\right|\,d\xi\right\}\cdot\mathbf{e}_z,
 \end{equation}
 where 
 \begin{equation}
 	\label{eqn:54}
-	\mathbf{R}_{centre}=\int^1_0 \mathbf{R}\,\left|\frac{\partial\mathbf{R}}{\partial\xi}\right|\,d\xi
+	\mathbf{R}_c=\int^1_0 \mathbf{R}\,\left|\frac{\partial\mathbf{R}}{\partial\xi}\right|\,d\xi
 \end{equation}
-represents the position of centre of mass. Under the Stokes flow regime, both the fluid and the immersed particle are assumed to have negligible inertia. As a result, there is no temporal accumulation of momentum, and the system must satisfy the equilibrium conditions at every time instant. Since we assume that there is no external body force, thus the system must satisfy the conditions of drag-free and torque-free. Hence, we have 
+represents the position of centre of mass. Under the Stokes flow regime, both the fluid and the immersed fibre are assumed to have negligible inertia. As a result, there is no temporal accumulation of momentum, and the system must satisfy the equilibrium conditions at every time instant. We assume that there is no external body force, thus the system must satisfy the conditions of drag-free and torque-free. Hence, we have 
 \begin{equation}
 	\label{eqn:55}
 	\mathbf{F}\,\Big(\mathbf{R}_0(\xi,t), X(t), Y(t), \phi(t)\Big)=\mathbf{0},
@@ -352,12 +328,12 @@ Combining $\eqref{eqn:51}, \eqref{eqn:55}$ and $\eqref{eqn:56}$, we collect the 
 	\end{aligned}\right.\Longrightarrow \Big(\mathbf{R}_0(\xi,t), X(t), Y(t),\phi(t)\Big).
 \end{equation}
 
-\section{Equilibrium governing equations}
+\subsection{Equilibrium governing equations}
 
-We are particularly interested in the equilibrium solutions of an elastic particle in shear flow, rather than the trivial tumbling state. 
+We are particularly interested in the equilibrium solutions of an elastic fibre in shear flow, rather than the trivial tumbling state. 
 
-\subsection{Solutions with constant orientations}
-From the rigid particle case, we assume that an elastic particle will also undergo a fixed orientation with a uniform drift when the particle reaches equilibrium. Hence, it is worth studying further the solutions with constant orientations (Namely, from \eqref{eqn:20}, we seek the steady solution for inclination $\phi(t)$, $\dot{\phi}(t)=0$), hence the following conditions are made:
+\subsubsection{Solutions with constant orientations}
+From the rigid fibre case, we assume that an elastic fibre will also undergo a fixed orientation with a uniform drift. Hence, it is worth studying further the solutions with constant orientations (Namely, from \eqref{eqn:20}, we seek the steady solution for inclination $\phi(t)$, $\dot{\phi}(t)=0$), hence the following conditions are made:
 \begin{equation}
 	\label{eqn:39}
 	\overline{\phi}(t)=\phi_{eq},\, \overline{\mathbf{R}_0}(\xi,t)=\mathbf{R}_0(\xi).
@@ -416,8 +392,11 @@ From the last step of $\eqref{eqn:45}$, it is obvious that $\left((\overline{\ma
 		0
 	\end{aligned}\right)-\left(\begin{aligned}
 		&\dot{\overline{X}}(t) \\
-	    &\dot{\overline{Y}}(t)
-	\end{aligned}\right)=\mathbf{0},
+		&\dot{\overline{Y}}(t)
+	\end{aligned}\right)=-\left(\begin{aligned}
+		&W \\
+		&V
+	\end{aligned}\right), \quad W,V \,\text{are constants},
 \end{equation}
 then $(\mathbf{U}^{\infty}-\mathbf{U})$ is independent of time $t$, implying that $\mathbf{f}_{f}$ is also independent of $t$.
 Considering $\eqref{eqn:46}$, we derive the non-dimensional specific expression for $\overline{\mathbf{r}_b}(t)$ as follows:
@@ -431,12 +410,13 @@ Considering $\eqref{eqn:46}$, we derive the non-dimensional specific expression 
 		Vt&+Y_0
 	\end{aligned}\right),
 \end{equation}
-where $V$ represents the vertical drift speed and the change rate  of horizontal motion, while $U$ denotes the initial horizontal speed. $(X_0, Y_0)$ is the initial position of the hinge point.
+where $V$ represents the vertical drift speed and the change rate  of horizontal motion, while $U=W+Y_0$ denotes the initial horizontal speed. $(X_0, Y_0)$ is the initial position of the hinge point.
 
- From the mathematical derivation above, we observe that if $\eqref{eqn:47}$ holds, the fluid traction $\mathbf{f}_{f}$ is steady (independent of time $t$). This aligns with the previously established condition $\overline{\mathbf{R}_0}(\xi,t)=\mathbf{R}_0(\xi)$. Consequently, it turns out that conditions $\eqref{eqn:39}$ are reasonable, and the entire deduction is self-consistent.
+From the mathematical derivation above, we observe that if $\eqref{eqn:47}$ holds, the fluid traction $\mathbf{f}_{f}$ is steady (independent of time $t$). This aligns with the previously established condition $\overline{\mathbf{R}_0}(\xi,t)=\mathbf{R}_0(\xi)$. Consequently, it turns out that conditions $\eqref{eqn:39}$ are reasonable, and the entire deduction is self-consistent.
 
-\subsection{Equilibrium equations}
-Since the elastic particles reach equilibrium, they continue to satisfy the drag-free and torque-free conditions, with the variables corresponding to their base state. Hence, we can obtain the expressions based on $\eqref{eqn:55}$ and $\eqref{eqn:56}$:
+
+\subsubsection{Equilibrium equations}
+Since the elastic fibres reach equilibrium, they continue to satisfy the drag-free and torque-free conditions, with the variables corresponding to their base state. Hence, we can obtain the expressions based on $\eqref{eqn:55}$ and $\eqref{eqn:56}$:
 \begin{equation}
 	\label{eqn:120}
 	\mathbf{F}\,(\mathbf{R}_0(\xi), V, U, \phi_{eq})=\mathbf{0},
@@ -456,21 +436,11 @@ Since the fluid traction is time-independent, the net drag and net torque remain
 \end{equation}
 
 
-
-
-
-
-
-
-
-
-
-
-\section{Linear stability}
+\subsection{Linear stability}
 To facilitate the analysis of the equations, we recall the expressions of solid traction \eqref{eqn:67} here:
 \begin{equation}
 	\label{eqn:104}
-		\mathbf{f}_s=\mathcal{I}\,\left(\mathbf{\mathcal{R}}^{-1}\,\mathbf{f}_f\right),
+	\mathbf{f}_s=\mathcal{I}\,\left(\mathbf{\mathcal{R}}^{-1}\,\mathbf{f}_f\right),
 \end{equation}
 where fluid traction from the slender body theory is 
 \begin{equation}
@@ -483,7 +453,7 @@ where fluid traction from the slender body theory is
 $\mathcal{I}$ is the FSI parameter and  $\mathbf{\mathcal{R}}^{-1}=\left(\begin{aligned}
 	&\cos(\phi(t))\quad \sin(\phi(t)) \\
 	&-\sin(\phi(t))\quad \cos(\phi(t))
-\end{aligned}\right)$ is the inverse of rotation matrix with $\phi(t)$ which measures the particle's inclination as shown in Figure \ref{fig:5}. We also remind that 
+\end{aligned}\right)$ is the inverse of rotation matrix with $\phi(t)$ which measures the fibre's inclination as shown in Figure \ref{fig:5}. We also remind that 
 \begin{equation}
 	\mathbf{R}(\xi,t)=\mathbf{\mathcal{R}}\,\mathbf{R}_0(\xi,t)+\mathbf{r}_b(t),
 \end{equation}
@@ -491,8 +461,8 @@ where $\mathbf{\mathcal{R}}=\left(\begin{aligned}
 	&\cos(\phi(t))\quad -\sin(\phi(t)) \\
 	&\sin(\phi(t))\quad \cos(\phi(t))
 \end{aligned}\right)$ is the rotation matrix and $\mathbf{r}_b(t)=\left(\begin{aligned}
-&X(t) \\
-&Y(t)
+	&X(t) \\
+	&Y(t)
 \end{aligned}\right)$ is the base vector indicating translation.
 Then, the implicit expression of beam equation is 
 \begin{equation}
@@ -502,13 +472,13 @@ Then, the implicit expression of beam equation is
 From these expressions above, we find that the three motion unknowns, $X(t), Y(t)$ and $\phi(t)$, along with their time derivatives,  $\frac{dX}{dt}, \frac{dY}{dt}$ and $\frac{d\phi}{dt}$, arise solely from the solid traction in the beam equation, namely 	
 \begin{equation}
 	\label{eqn:107}
-\mathbf{\mathcal{S}}\Big\{\mathbf{R}_0(\xi,t),\mathbf{f}_s\Big(X(t), Y(t),\phi(t),\frac{dX}{dt}, \frac{dY}{dt},\frac{d\phi}{dt}\Big);\mathbf{r}_0(\xi)\Big\}=0.
+	\mathbf{\mathcal{S}}\Big\{\mathbf{R}_0(\xi,t),\mathbf{f}_s\Big(X(t), Y(t),\phi(t),\frac{dX}{dt}, \frac{dY}{dt},\frac{d\phi}{dt}\Big);\mathbf{r}_0(\xi)\Big\}=0.
 \end{equation}
 
 Since we use the finite element method to solve the equations, $\mathbf{R}_0(\xi,t)$ has been discretised as the Galerkin solution. In the $e$-th element, we have
 \begin{equation}
 	\label{eqn:108}
-R_0^{i,[e]}=R_{ijk}^{[e]}(t)\, \psi_{jk}(s),
+	R_0^{i,[e]}=R_{ijk}^{[e]}(t)\, \psi_{jk}(s),
 \end{equation}
 where $R_{ij1}^{[e]}$ represents the $i$-th coordinate of the local node $j$ and $R_{ij2}^{[e]}$ represents the derivative of $i$-th coordinate with respect to local variable $s$, evaluated at the node local $j$.
 
@@ -525,15 +495,15 @@ We set the governing equations \eqref{eqn:57} as $\mathbf{E}=\mathbf{0}$ and the
 Then, with the linear stability, we have 
 \begin{equation}
 	\label{eqn:123}
-    \mathbf{X}(t)=\overline{\mathbf{X}}(t)+\epsilon \hat{\mathbf{X}}(t),
+	\mathbf{X}(t)=\overline{\mathbf{X}}(t)+\epsilon \hat{\mathbf{X}}(t),
 \end{equation}
 where $\bar{\mathbf{X}}$ is the base state, $\hat{\mathbf{X}}$ is the perturbation and $\epsilon$ is the amplitude of the (initial) perturbation.
 Applying Taylor's expansion at the base state, we obtain:
 \begin{equation}
 	\label{eqn:109}
-\mathbf{E}(\mathbf{X})=\mathbf{E}(\bar{\mathbf{X}}+\epsilon \hat{\mathbf{X}})=\mathbf{E}(\bar{\mathbf{X}})+\epsilon \Big(\frac{\partial \mathbf{E}}{\partial \mathbf{X}}\Big|_{\mathbf{X}=\bar{\mathbf{X}}}\hat{\mathbf{X}}+\frac{\partial \mathbf{E}}{\partial \dot{\mathbf{X}}}\Big|_{\mathbf{X}=\bar{\mathbf{X}}}\dot{\hat{\mathbf{X}}}\Big)+o(\epsilon),
+	\mathbf{E}(\mathbf{X})=\mathbf{E}(\bar{\mathbf{X}}+\epsilon \hat{\mathbf{X}})=\mathbf{E}(\bar{\mathbf{X}})+\epsilon \Big(\frac{\partial \mathbf{E}}{\partial \mathbf{X}}\Big|_{\mathbf{X}=\bar{\mathbf{X}}}\hat{\mathbf{X}}+\frac{\partial \mathbf{E}}{\partial \dot{\mathbf{X}}}\Big|_{\mathbf{X}=\bar{\mathbf{X}}}\dot{\hat{\mathbf{X}}}\Big)+o(\epsilon),
 \end{equation}
- Since $\mathbf{E}(\bar{\mathbf{X}})=\mathbf{0}$, we have 
+Since $\mathbf{E}(\bar{\mathbf{X}})=\mathbf{0}$, we have 
 \begin{equation}
 	\label{eqn:110}
 	\frac{\partial \mathbf{E}}{\partial \mathbf{X}}\Big|_{\mathbf{X}=\bar{\mathbf{X}}}\hat{\mathbf{X}}+\frac{\partial \mathbf{E}}{\partial \dot{\mathbf{X}}}\Big|_{\mathbf{X}=\bar{\mathbf{X}}}\dot{\hat{\mathbf{X}}}=\mathbf{0}.
@@ -541,15 +511,16 @@ Applying Taylor's expansion at the base state, we obtain:
 We define the Jacobian matrix as $\mathbf{\mathcal{J}}=\frac{\partial \mathbf{E}}{\partial \mathbf{X}}\Big|_{\mathbf{X}=\bar{\mathbf{X}}}$ and the mass matrix as $\mathbf{\mathcal{M}}=\frac{\partial \mathbf{E}}{\partial \dot{\mathbf{X}}}\Big|_{\mathbf{X}=\bar{\mathbf{X}}}$. Then, the above equation becomes 
 \begin{equation}
 	\label{eqn:111}
-\mathbf{\mathcal{J}}\hat{\mathbf{X}}+\mathbf{\mathcal{M}}\dot{\hat{\mathbf{X}}}=\mathbf{0}.
+	\mathbf{\mathcal{J}}\hat{\mathbf{X}}+\mathbf{\mathcal{M}}\dot{\hat{\mathbf{X}}}=\mathbf{0}.
 \end{equation}
 This is different from the classic theory, as our base state here is also a function of time, namely $\frac{d\bar{\mathbf{X}}}{dt}\neq\mathbf{0}$. However, we ultimately find that both the Jacobian matrix and the mass matrix are time-independent, which allows us to proceed with the standard eigenvalue analysis.
 
- In our project, when the particle reaches equilibrium, only its orientation (inclination) and configuration attains the steady state, meaning  $\frac{d\theta}{dt}=\frac{dR_{ijk}^{[e]}}{dt}=0$, while the other two motion variables, $X(t), Y(t)$, remain time-dependent. Actually, in this so-called "steady" state, the particle undergoes a certain type motion with a parabolic trajectory. We may regard it as quasi-steady, since any perturbation to the system would disrupt the particle's motion pattern, yet after some time, the system would return to its original motion type. 
- 
- \chapter{Results}
-\section{Geometry of the particle}
-This report draws on the definition of the boomerang's geometry as described in Roggeveen and Stone's paper \cite{roggeveen2022motion}, using two parameters, $q$ and $\alpha$, to characterise the boomerang-shape when the elastic particle is in rest state. We define the length of the long arm of the boomerang as $l_1=q+0.5$, and the length of the short arm as $l_2=0.5-q$, where $q \in [0,0.5)$. The total length is $l_1+l_2=1$ (note that we set the total length of the particle as the characteristic length $\mathcal{L}$). Additionally, we define the angle between the two arms as the opening angle $\alpha$, where $\alpha \in (0,2\pi)$. The hinge of the boomerang is not flexible so that the opening angle $\alpha$ remains fixed. Figure \ref{fig:1} shows the basic idea about these geometrical setups. 
+In our project, when the fibre reaches "steady", only its orientation (inclination) and configuration attain the steady state, meaning  $\frac{d\theta}{dt}=\frac{dR_{ijk}^{[e]}}{dt}=0$, while the other two motion variables, $X(t), Y(t)$, remain time-dependent. Actually, in this so-called "steady" state, the fibre undergoes a certain type motion with a parabolic trajectory. We may regard it as quasi-steady, since any perturbation to the system would disrupt the fibre's motion pattern, yet after some time, the system would return to its original motion type. 
+
+
+\section{Results}
+\subsection{Geometry of the fibre}
+This report draws on the definition of the boomerang's geometry as described in Roggeveen and Stone's paper, using two parameters, $q$ and $\alpha$, to characterise the boomerang-shape when the elastic fibre is in rest state. We define the length of the long arm of the boomerang as $l_1=q+0.5$, and the length of the short arm as $l_2=0.5-q$, where $q \in [0,0.5)$. The total length is $l_1+l_2=1$ (note that we set the total length of the fibre as the characteristic length $\mathcal{L}$). Additionally, we define the angle between the two arms as the opening angle $\alpha$, where $\alpha \in (0,2\pi)$. The hinge of the boomerang is not flexible so that the opening angle $\alpha$ remains fixed. Figure \ref{fig:1} shows the basic idea about these geometrical setups. 
 \begin{figure}[htb]
 	\begin{center}
 		% specify width as 80% of the width of the text on the page
@@ -578,16 +549,27 @@ We exclude the case where the object becomes a straight rod (considering the ran
 		% specify width as 80% of the width of the text on the page
 		% we can also specify a width in centimetres, e.g. [width=8cm]
 		\includegraphics[width=0.8\textwidth]{plot/fluid.png}
-		\caption{Schematic of an elastic boomerang-shaped particle in the deformed state immersed in shear flow. The dashed black and dashed red lines represent the undeformed configurations corresponding to the deformed arms $\mathbf{R}^{(1)}$ and $\mathbf{R}^{(2)}$, respectively. $\alpha$ is the opening angle between the two dashed lines.} 
+		\caption{Schematic of an elastic boomerang-shaped fibre in the deformed state immersed in shear flow. The dashed black and dashed red lines represent the undeformed configurations corresponding to the deformed arms $\mathbf{R}^{(1)}$ and $\mathbf{R}^{(2)}$, respectively. $\alpha$ is the opening angle between the two dashed lines.} 
 		\label{fig:6}
 	\end{center}
 	%	\setlength{\abovecaptionskip}{-0.5 cm}
 \end{figure}
-To implement the algorithm for this particle, we model it as two elastic beams joined at the hinge point. Initially, both beams are clamped at the origin, differing in length and rotation angle. The length of the long beam is $q+0.5$, while the short beam's length is $0.5-q$, where $q \in [0,0.5)$. The rotation angle for the long beam is given by the inclination $\phi(t)$, whereas for the short beam, it is $\phi(t)+\alpha$. Figure \ref{fig:6} provides a schematic illustration of this process. 
+\begin{figure}[htb]
+	\begin{center}
+		% specify width as 80% of the width of the text on the page
+		% we can also specify a width in centimetres, e.g. [width=8cm]
+		\includegraphics[width=0.8\textwidth]{plot/elastic_case/deformed_config.png}
+		\caption{Schematic of an elastic boomerang-shaped fibre in the deformed state immersed in shear flow. The dashed black and dashed red lines represent the undeformed configurations corresponding to the deformed arms $\mathbf{R}^{(1)}$ and $\mathbf{R}^{(2)}$, respectively. $\alpha$ is the opening angle between the two dashed lines.}
+		\label{fig:22}
+	\end{center}
+	%	\setlength{\abovecaptionskip}{-0.5 cm}
+\end{figure}
+To implement the algorithm for this fibre, we model it as two elastic beams joined at the hinge point. Initially, both beams are clamped at the origin, differing in length and rotation angle. The length of the long beam is $q+0.5$, while the short beam's length is $0.5-q$, where $q \in [0,0.5)$. The rotation angle for the long beam is given by the inclination $\phi(t)$, whereas for the short beam, it is $\phi(t)+\alpha$. Figure \ref{fig:6} provides a schematic illustration of this process. 
 
-\section{Equilibrium solutions}
-\subsection{Four equilibria}
-Roggeveen and Stone \cite{roggeveen2022motion} have studied the dynamics of this particle shape for the rigid case, namely $\mathcal{I}=0$, in shear flow at zero Reynolds number. If, when $\mathcal{I}=0$, the solutions coincide with the results presented in their paper, it would lend a certain degree of validation to our results.
+
+\subsection{Equilibrium solutions}
+\subsubsection{Four equilibria}
+Roggeveen and Stone have studied the dynamics of this fibre shape for the rigid case, namely $\mathcal{I}=0$, in shear flow at zero Reynolds number. If, when $\mathcal{I}=0$, the solutions coincide with the results presented in their paper, it would lend a certain degree of validation to our results.
 We run multiple examples using \texttt{oomph-lib} and select some representative cases to present in this report. Similar to the results of Roggeveen and Stone in Figure \ref{fig:18}, the complete solutions of the system also exhibit four equilibria. Of these four fixed orientations, two differ from the other two by an angle of $\pi$ but possess the same shapes, as shown in Figure \ref{fig:20}. Hence, to simplify the discussion, we will focus solely on one group of the two solutions in the following sections.
 \begin{figure}[!h]
 	\begin{center}
@@ -600,24 +582,49 @@ We run multiple examples using \texttt{oomph-lib} and select some representative
 	%	\setlength{\abovecaptionskip}{-0.5 cm}
 \end{figure}
 
-\subsection{Effect of increasing FSI parameter $\mathcal{I}$}
+\subsubsection{Effect of increasing FSI parameter $\mathcal{I}$}
+We believe that plotting the steady orientation $\theta_{eq}$ against the FSI coefficient $\mathcal{I}$ could be an effective way to initially visualise the data. Figure \ref{fig:7} illustrates the case of $q = 0.4$ and $\alpha = 0.230\pi$. The curve begins and ends at $\mathcal{I}=0$, which is consistent with the rigid case results in Roggeveen and Stone's paper. To intuitively demonstrate the different deformations along the curve, we also attach the shapes of the particle at various points. There is a limit point within this curve where the deformed shapes on both the upper and lower branches converge and align with each other. We observe that the long arm undergoes more noticeable deformation, while the short arm shows no significant deformation. The deformed shapes can be classified by the number of humps in the deformed long arm. In Figure \ref{fig:7}, these shapes fall into the 'one hump' category.
 \begin{figure}[!h]
 	\begin{center}
 		% specify width as 80% of the width of the text on the page
 		% we can also specify a width in centimetres, e.g. [width=8cm]
 		\includegraphics[width=1\textwidth]{plot/RESLT_q_0.40_alpha_0.230pi_plot_step_refine2_new_recale_FSI/combine_elastic_beam_I_theta_q_0.40_alpha_0.230pi_initial_-4.80_refine2_15_new.png}
-		\caption{The steady orientation $\theta_{eq}$ is plotted against the FSI parameter $\mathcal{I}$ for the particle with shape parameters $q = 0.4$ and $\alpha = 0.230\pi$. Deformations of all shapes are shown exaggeratedly. On the right-hand side, a comparison between the exaggerated and actual shapes is provided at a red point corresponding to $\mathcal{I}=0.0003$, to illustrate the scale of deformation. Thin black dashed line is the bisector of the opening angle $\alpha$, which is vertical to the right side of the grey blocks. Shapes are stretched by a factor of two along this side to make the deformations more apparent. Shapes along each branch of the curve consistently display the same colour. At the limit point, two branches coalesce and their corresponding particle shapes become identical.}
+		\caption{The steady orientation $\theta_{eq}$ is plotted against the FSI parameter $\mathcal{I}$ for the fibre with shape parameters $q = 0.4$ and $\alpha = 0.230\pi$. Deformations of all shapes are shown exaggeratedly. On the right-hand side, a comparison between the exaggerated and actual shapes is provided at a red point corresponding to $\mathcal{I}=3600$, to illustrate the scale of deformation. Thin black dashed line is the bisector of the opening angle $\alpha$, which is vertical to the right side of the grey blocks. Shapes are stretched by a factor of two along this side to make the deformations more apparent. Shapes along each branch of the curve consistently display the same colour. At the limit point, two branches coalesce and their corresponding fibre shapes become identical.}
 		\label{fig:7}
 	\end{center}
 	%	\setlength{\abovecaptionskip}{-0.5 cm}
 \end{figure}
+Figure \ref{fig:8} depicts a more complex curve than Figure \ref{fig:7}, featuring numerous twists and additional limit points. The only difference in the initial undeformed shapes between this case and that of Figure \ref{fig:7} lies in the opening angle $\alpha$ between two arms: here, the opening angle is smaller than the previous case. This curve also begins and ends at $\mathcal{I}=0$, consistent with the rigid results. The shapes along the different branches ultimately align at the limit points. The outer branch of the curve is similar to Figure $\ref{fig:7}$'s case, with shapes in this branch also falling into the 'one hump' category. New shapes appear in the inner curve, where a tail develops at the end of the long arm. These shapes can be classified into the 'two humps' category. We also find that, compared to the previous case, $\mathcal{I}_{max}$ increases and $\theta_{eq,min}$ decreases. Additionally, a bifurcation occurs along the curve, revealing an even more intriguing phenomenon as $\alpha$ varies, as shown in Figure \ref{fig:9}.
 \begin{figure}[!h]
 	\begin{center}
 		% specify width as 80% of the width of the text on the page
 		% we can also specify a width in centimetres, e.g. [width=8cm]
 		\includegraphics[width=1\textwidth]{plot/RESLT_q_0.40_alpha_0.180pi_plot_step_refine2_new_recale_FSI/combine_elastic_beam_I_theta_q_0.400_alpha_0.180pi_initial_-4.80_refine2_rescale_FSI.png}
-        \caption{The steady orientation $\theta_{eq}$ is plotted against the FSI parameter $\mathcal{I}$ for the particle with shape parameters $q = 0.4$ and $\alpha = 0.180\pi$. The shapes along the curve are also stretched by a factor of two along the right side of the grey block. Multiple limit points are observed along the curve, and a new type of deformation emerges, as shown on the right-hand side.}
-        \label{fig:8}
+		\caption{The steady orientation $\theta_{eq}$ is plotted against the FSI parameter $\mathcal{I}$ for the fibre with shape parameters $q = 0.4$ and $\alpha = 0.180\pi$. The shapes along the curve are also stretched by a factor of two along the right side of the grey block. Multiple limit points are observed along the curve, and a new type of deformation emerges, as shown on the right-hand side.}
+		\label{fig:8}
+	\end{center}
+	%	\setlength{\abovecaptionskip}{-0.5 cm}
+\end{figure}
+
+Figure \ref{fig:9} is a sequence of logarithmic plots illustrating the bifurcation process as $\alpha$ increases. In the first three subplots, where $\alpha=0.180\pi,0.190\pi,0.200\pi$, the curve exhibits two prominent protrusions. As $\alpha$ increases, the distance between these protrusions gradually decreases. When $\alpha$ reaches a value between $0.200\pi$ and $0.210\pi$, a bifurcation occurs, giving rise to a new, independent inner closed loop (blue). This bifurcation signifies a critical transition in the system’s behaviour, where the previously connected equilibrium solutions split, leading to multiple distinct solution curves. We also check the shapes along the newly appeared blue curve still follow the observed pattern and belong to the 'two humps' category.
+\begin{figure}[!h]
+	\begin{center}
+		% specify width as 80% of the width of the text on the page
+		% we can also specify a width in centimetres, e.g. [width=8cm]
+		\includegraphics[width=0.7\textwidth]{plot/RESLT_animation_varying_alpha_q_0.400_step_rescale_FSI/elastic_beam_I_theta_q_0.400_alpha_5.png}
+		\caption{A sequence of plots presents the steady orientation $\theta_{eq}$ against the FSI parameter $\mathcal{I}$ for shape parameters $q = 0.4$ with varying $\alpha$. The scale of the axes is consistent across all subplots.}
+		\label{fig:9}
+	\end{center}
+	%	\setlength{\abovecaptionskip}{-0.5 cm}
+\end{figure}
+We find even more complex curves, and Figure \ref{fig:12} illustrates a representative case for a larger $q$, where the length of the short arm is very small. Although this curve appears complex, it still starts and ends at $\mathcal{I}=0$, maintaining consistency with the Roggeveen and Stone's results. The curve exhibits more twists and includes additional shape types. Intuitively, there are two new categories with corresponding new branches. In the outer new branch, the shapes (orange and dark blue) display 'three humps'. In the inner new branch, the shapes (dark green and brown) exhibit 'four humps,' with a tail forming at the end of the long arm, following the previous pattern where a tail appears in the shape on the inner branch of the curve. The two outermost branches, which are very close to each other, exhibit multiple intersections. This is why the order of the shapes (green and blue, cyan and purple) changes along these branches. The shapes along these two outermost branches still belong to the 'two humps' and 'one hump' categories. Actually, this complex curve has more bifurcations, as shown in Figure \ref{fig:13}.
+\begin{figure}[!h]
+	\begin{center}
+		% specify width as 80% of the width of the text on the page
+		% we can also specify a width in centimetres, e.g. [width=8cm]
+		\includegraphics[width=1\textwidth]{plot/combine_elastic_beam_I_theta_q_0.452_alpha_0.125pi_initial_-4.80_0.png}
+		\caption{The steady orientation $\theta_{eq}$ is plotted against the FSI coefficient $\mathcal{I}$ for the fibre with shape parameters $q = 0.452$ and $\alpha = 0.125\pi$. The top-right subplot shows the convergence test with doubled elements for the case at $\mathcal{I}=0.65$.}
+		\label{fig:12}
 	\end{center}
 	%	\setlength{\abovecaptionskip}{-0.5 cm}
 \end{figure}
@@ -625,14 +632,66 @@ We run multiple examples using \texttt{oomph-lib} and select some representative
 	\begin{center}
 		% specify width as 80% of the width of the text on the page
 		% we can also specify a width in centimetres, e.g. [width=8cm]
-		\includegraphics[width=0.6\textwidth]{plot/RESLT_animation_varying_alpha_q_0.400_step_rescale_FSI/elastic_beam_I_theta_q_0.400_alpha_5.png}
-		\caption{A sequence of plots presents the steady orientation $\theta_{eq}$ against the FSI parameter $\mathcal{I}$ for shape parameters $q = 0.4$ with varying $\alpha$. The top-left subplot shows the convergence test with doubled elements, and the scale of the axes is consistent across all subplots.}
-		\label{fig:9}
+		\includegraphics[width=1\textwidth]{plot/logx_combine_elastic_beam_I_theta_q_0.452_alpha_0.125pi_initial_-4.80_0.png}
+		\caption{The steady orientation $\theta_{eq}$ is plotted against the FSI coefficient $\mathcal{I}$ for the fibre with shape parameters $q = 0.452$ and $\alpha = 0.125\pi$.}
+	\end{center}
+	%	\setlength{\abovecaptionskip}{-0.5 cm}
+\end{figure}
+\begin{figure}[!h]
+	\centering
+	\begin{minipage}{\linewidth}
+		\centering
+		\includegraphics[scale=0.15]{plot/elastic_beam_I_theta_q_0.452_alpha_restart1.png}
+	\end{minipage}
+	\begin{minipage}{\linewidth}
+		\centering
+		\includegraphics[scale=0.15]{plot/elastic_beam_I_theta_q_0.452_alpha_restart2.png}
+	\end{minipage}
+	\begin{minipage}{\linewidth}
+		\centering
+		\includegraphics[scale=0.15]{plot/elastic_beam_I_theta_q_0.452_alpha_restart3.png}
+	\end{minipage}
+	\caption{A sequence of logarithmic plots presents the steady orientation $\theta_{eq}$ against the FSI coefficient $\mathcal{I}$ for shape parameters $q = 0.452$ with varying $\alpha$. The top-left subplot shows the convergence test with doubled elements, and the scale of the axes is consistent across all subplots.}
+	\label{fig:13}
+\end{figure}
+In Figure \ref{fig:13}, there are three bifurcations as $\alpha$ varies, and we have selected three sequences to illustrate them. The explanations are generally similar: as $\alpha$ increases, two distinct protrusions gradually approach each other until they meet at a bifurcation point, causing the curve to split and generate a new independent closed loop. Subsequently, as $\alpha$ continues to increase, this new independent closed loop moves away from the previously connected curve. Finally, the curve splits into three inner closed loops (green, blue and black) and an outermost curve (red) that still connects to the two points at $\mathcal{I} = 0$. Note that after $\alpha=0.4\pi$, the four curves (three inner closed loops and one outermost curve) are independent with each other.
+
+\subsubsection{$q-\alpha$ plot for different $\mathcal{I}$}
+ Similarly to the Roggeveen and Stone's $q-\alpha$ plot in Figure \ref{fig:18}, we aim to determine the boundary of the region where steady orientations exist for the elastic fibre case. To achieve this, we first plot the steady orientation $\theta_{eq}$ against the opening angle $\alpha$, as shown in Figure \ref{fig:14}. 
+ \begin{figure}[!h]
+	\begin{center}
+		% specify width as 80% of the width of the text on the page
+		% we can also specify a width in centimetres, e.g. [width=8cm]
+		\includegraphics[width=0.6\textwidth]{plot/elastic_beam_alpha_theta_eq_q_0.400.png}
+		\caption{The steady orientation $\theta_{eq}$ is plotted against  the opening angle $\alpha$ for the fibre with $q = 0.4$. The bottom-right subplot shows the figures of $\mathcal{I}=1.0, 1.5, 2.0$ at a smaller scale.}
+		\label{fig:14}
+	\end{center}
+	%	\setlength{\abovecaptionskip}{-0.5 cm}
+\end{figure}
+In Figure \ref{fig:14}, as $\mathcal{I}$ increases, $\alpha_{max}$ initially rises and then rapidly decreases. We observe that every curve for different values of $\mathcal{I}$ forms a closed loop. Therefore, by tracing $\alpha_{max}$ for various $\mathcal{I}$, we can determine the boundary of the steady orientation region. Figure \ref{fig:15} shows the boundary we concern for different FSI coefficient $\mathcal{I}$. The red line represents the boundary for $\mathcal{I}=0$, which aligns with the results from Roggeveen and Stone's paper. Generally, as $\mathcal{I}$ increases, the region initially expands and then contracts. We can analyse this plot alongside Figure \ref{fig:14}. Focusing on a vertical line at $q = 0.4$, we observe that as $\mathcal{I}$ increases within the range $[0, 0.001]$ (from red to green), the boundary expands, indicating that $\alpha_{max}$ increases in Figure \ref{fig:15}. However, starting from  $\mathcal{I} = 0.01$ (orange), the region begins to shrink, meaning that $\alpha_{max}$ decreases in Figure \ref{fig:15}. It appears that there is a threshold around $\mathcal{I}=0.001$ (green). Before this threshold, as $\mathcal{I}$ increases, $\alpha_{max}$ also increases. After this point, when $\mathcal{I}$ increases, $\alpha_{max}$ decreases rapidly. In addition, we observe that when $\mathcal{I}\geq1$ (pink), the boundary reaches a relatively solid state. As the value of $\mathcal{I}$ increases, it appears that the boundary approaches its limit and changes more slowly.
+\begin{figure}[!h]
+	\begin{center}
+		% specify width as 80% of the width of the text on the page
+		% we can also specify a width in centimetres, e.g. [width=8cm]
+		\includegraphics[width=0.6\textwidth]{plot/RESLT_q_alpha_plot/elastic_beam_general.png}
+		\caption{This plot shows the boundary of the fixed points region for different FSI parameter $\mathcal{I}$.}
+		\label{fig:15}
+	\end{center}
+	%	\setlength{\abovecaptionskip}{-0.5 cm}
+\end{figure}
+\begin{figure}[!h]
+	\begin{center}
+		% specify width as 80% of the width of the text on the page
+		% we can also specify a width in centimetres, e.g. [width=8cm]
+		\includegraphics[width=0.6\textwidth]{plot/RESLT_q_alpha_plot_paper/elastic_beam_general.png}
+		\caption{This plot shows the boundary of the steady orientation region for different FSI parameter $\mathcal{I}$.}
+		\label{fig:26}
 	\end{center}
 	%	\setlength{\abovecaptionskip}{-0.5 cm}
 \end{figure}
 
-\subsection{Stability}
+
+\subsubsection{Stability}
 \begin{figure}[!h]
 	\begin{center}
 		% specify width as 80% of the width of the text on the page
@@ -657,69 +716,8 @@ We run multiple examples using \texttt{oomph-lib} and select some representative
 	\begin{center}
 		% specify width as 80% of the width of the text on the page
 		% we can also specify a width in centimetres, e.g. [width=8cm]
-		\includegraphics[width=1\textwidth]{plot/combine_elastic_beam_I_theta_q_0.452_alpha_0.125pi_initial_-4.80_0.png}
-		\caption{The steady orientation $\theta_{eq}$ is plotted against the FSI coefficient $\mathcal{I}$ for the particle with shape parameters $q = 0.452$ and $\alpha = 0.125\pi$. The top-right subplot shows the convergence test with doubled elements for the case at $\mathcal{I}=0.65$.}
-		\label{fig:12}
-	\end{center}
-	%	\setlength{\abovecaptionskip}{-0.5 cm}
-\end{figure}
-\begin{figure}[!h]
-	\centering
-	\begin{minipage}{\linewidth}
-		\centering
-		\includegraphics[scale=0.166]{plot/elastic_beam_I_theta_q_0.452_alpha_restart1.png}
-	\end{minipage}
-	\begin{minipage}{\linewidth}
-		\centering
-		\includegraphics[scale=0.166]{plot/elastic_beam_I_theta_q_0.452_alpha_restart2.png}
-	\end{minipage}
-	\begin{minipage}{\linewidth}
-		\centering
-		\includegraphics[scale=0.166]{plot/elastic_beam_I_theta_q_0.452_alpha_restart3.png}
-	\end{minipage}
-	\caption{A sequence of logarithmic plots presents the steady orientation $\theta_{eq}$ against the FSI coefficient $\mathcal{I}$ for shape parameters $q = 0.452$ with varying $\alpha$. The top-left subplot shows the convergence test with doubled elements, and the scale of the axes is consistent across all subplots.}
-	\label{fig:13}
-\end{figure}
-\begin{table}[!h]
-	\setlength{\belowcaptionskip}{0.8cm}
-	\caption{The four types of deformations are categorised by the number of humps appearing on the long arm of the particle.} 
-	\label{Table:1}
-	\renewcommand\arraystretch{1.5}
-	\resizebox{\textwidth}{!}{
-		\begin{tabular}{|>{\centering\arraybackslash}m{0.25\textwidth} >{\centering\arraybackslash}m{0.25\textwidth} >{\centering\arraybackslash}m{0.25\textwidth} >{\centering\arraybackslash}m{0.25\textwidth}|}
-			\hline
-			\hspace{0.8cm}one hump  & \hspace{-0.3cm}two humps& \hspace{-1cm}three humps & \hspace{-1.8cm}four humps \\
-			\hline
-			\multicolumn{4}{|c|}{\includegraphics[width=\linewidth]{plot/geometry3.png}} \\
-			\hline
-	\end{tabular}}
-\end{table}
-\begin{figure}[!h]
-	\begin{center}
-		% specify width as 80% of the width of the text on the page
-		% we can also specify a width in centimetres, e.g. [width=8cm]
-		\includegraphics[width=0.6\textwidth]{plot/elastic_beam_alpha_theta_eq_q_0.400.png}
-		\caption{The steady orientation $\theta_{eq}$ is plotted against  the opening angle $\alpha$ for the particle with $q = 0.4$. The bottom-right subplot shows the figures of $\mathcal{I}=1.0, 1.5, 2.0$ at a smaller scale.}
-		\label{fig:14}
-	\end{center}
-	%	\setlength{\abovecaptionskip}{-0.5 cm}
-\end{figure}
-\begin{figure}[!h]
-	\begin{center}
-		% specify width as 80% of the width of the text on the page
-		% we can also specify a width in centimetres, e.g. [width=8cm]
-		\includegraphics[width=0.6\textwidth]{plot/RESLT_q_alpha_plot/elastic_beam_general.png}
-		\caption{This plot shows the boundary of the fixed points region for different FSI parameter $\mathcal{I}$.}
-		\label{fig:15}
-	\end{center}
-	%	\setlength{\abovecaptionskip}{-0.5 cm}
-\end{figure}
-\begin{figure}[!h]
-	\begin{center}
-		% specify width as 80% of the width of the text on the page
-		% we can also specify a width in centimetres, e.g. [width=8cm]
 		\includegraphics[width=0.5\textwidth]{plot/tensile_boomerang.png}
-		\caption{The rigid structure particle ($\mathcal{I}=0$).}
+		\caption{The rigid structure fibre ($\mathcal{I}=0$).}
 		\label{fig:16}
 	\end{center}
 	%	\setlength{\abovecaptionskip}{-0.5 cm}
@@ -731,7 +729,7 @@ To understand the mechanism of deformation, we define the tensile stress as
 	\label{eqn:91}
 	\sigma(\xi)=\int_0^\xi (\mathbf{f}\cdot\mathbf{t}) \left |\frac{\partial \mathbf{R}}{\partial \xi}\right|\,d\xi,
 \end{equation}
-where $\mathbf{t}$ is the unit tangent vector to the surface of the particle. As shown in Figure \ref{fig:15}, we use $\sigma_1$ and $\mathbf{t}_1$ to denote the tensile stress and tangent vector in the short arm, and $\sigma_2$ and $\mathbf{t}_2$ for the long arm. At the hinge point, we have 
+where $\mathbf{t}$ is the unit tangent vector to the surface of the fibre. As shown in Figure \ref{fig:15}, we use $\sigma_1$ and $\mathbf{t}_1$ to denote the tensile stress and tangent vector in the short arm, and $\sigma_2$ and $\mathbf{t}_2$ for the long arm. At the hinge point, we have 
 \begin{equation}
 	\label{eqn:92}
 	\sigma_1(0.5-q)=\mathbf{F}_1\cdot\mathbf{t}_1, 
@@ -818,9 +816,33 @@ Therefore, we have
 	\caption{Tensile stress for different shape parameters ($\mathcal{I}=0$).}
 	\label{fig:17}
 \end{figure}
-Figure \ref{fig:17} presents the six results of the tensile stress for different shape parameters when $\mathcal{I}=0$. When $\xi=0$ or $\xi=1$, $\sigma=0$, which is consistent with the fact that no force acts on the free ends. Each plot shows a jump discontinuity at the hinge point. It can be observed that the tensile stress at this point is non-zero and has opposite signs on either side, indicating a complex mechanical relationship at the hinge. The curves illustrate the tensile stress experienced by the rigid particle under fluid forces, indicating a tendency for deformation if it were made of elastic material. 
 
+Figure \ref{fig:17} presents the six results of the tensile stress for different shape parameters when $\mathcal{I}=0$. When $\xi=0$ or $\xi=1$, $\sigma=0$, which is consistent with the fact that no force acts on the free ends. Each plot shows a jump discontinuity at the hinge point. It can be observed that the tensile stress at this point is non-zero and has opposite signs on either side, indicating a complex mechanical relationship at the hinge. The curves illustrate the tensile stress experienced by the rigid fibre under fluid forces, indicating a tendency for deformation if it were made of elastic material. 
 
-\bibliography{references}
+\subsubsection{Non-rotating to rotating solutions: A SNIPER bifurcation}
+\begin{figure}[!h]
+	\begin{center}
+		% specify width as 80% of the width of the text on the page
+		% we can also specify a width in centimetres, e.g. [width=8cm]
+		\includegraphics[width=1\textwidth]{plot/rotating_and_non_rotating/rotating.png}
+		\caption{Top left: Undeformed configuration of the elastic fibre corresponding to the red point ($q=0.3, \alpha=0.278\pi>\alpha_{crt}$) located in the white region, where the motion follows Jeffery orbits. The blue line marks the boundary of the new steady orientation region for $\mathcal{I}$. Top right: Time evolution of the instantaneous orientation $\theta(t)$ with period $T$. Bottom: Shape of the elastic fibre (actual shape, no stretching) undergoing large flow-induced deformations in shear flow.}
+		\label{fig:24}
+	\end{center}
+	%	\setlength{\abovecaptionskip}{-0.5 cm}
+\end{figure}
+
+\begin{figure}[!h]
+	\begin{center}
+		% specify width as 80% of the width of the text on the page
+		% we can also specify a width in centimetres, e.g. [width=8cm]
+		\includegraphics[width=0.6\textwidth]{plot/T_alpha_plots/I_0.0003000_q_0.300_initial_-4.80_element_20_T_alpha_plot_new.png}
+		\caption{The numerical results for $q=0.3, \alpha>\alpha_{crt}$ (red line points) asymptotically approach the theoretical prediction of the SNIPER bifurcation.}
+		\label{fig:25}
+	\end{center}
+	%	\setlength{\abovecaptionskip}{-0.5 cm}
+\end{figure}
+
+%% End of file `jfm.bib'.
+
 
 \end{document}
