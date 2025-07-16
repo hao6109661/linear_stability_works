@@ -707,11 +707,17 @@ In Figure \ref{fig:14}, as $\mathcal{I}$ increases, $\alpha_{max}$ initially ris
 		% specify width as 80% of the width of the text on the page
 		% we can also specify a width in centimetres, e.g. [width=8cm]
 		\includegraphics[width=0.8\textwidth]{plot/RESLT_q_0.40_alpha_0.180pi_plot_step_refine2_new_recale_FSI/combine_elastic_beam_I_theta_q_0.400_alpha_0.180pi_initial_-4.80_refine2_new_dash_line.png}
-		\caption{The linear stability analysis for the case $q=0.4,\alpha=0.180\pi$ reveals a more complex scenario. The upper branch (solid line) remains stable, as no positive eigenvalues are present. After the rightmost limit point, the system becomes unstable with the emergence of a single positive eigenvalue (long-dashed line). Following the left limit point, the stability does not switch, but an additional positive eigenvalue appears (short-dashed line), resulting in two positive eigenvalues in total. Subsequently, at the right limit point, although the stability does not exchange, one of the positive eigenvalues vanishes (returning to the long-dashed line). These results remain consistent with the rigid case.}
+		\caption{The linear stability analysis for the case $q=0.4,\alpha=0.180\pi$ reveals a more complex scenario. The upper branch (solid line) remains stable, as no positive eigenvalues are present. After the rightmost limit point, the system becomes unstable with the emergence of a single positive eigenvalue (long-dashed line). Following the left limit point, the stability does not switch, but an additional positive eigenvalue appears (short-dashed line), resulting in two positive eigenvalues in total. Subsequently, at the right limit point, although the stability does not exchange, one of the positive eigenvalues vanishes (returning to the long-dashed line).}
 		\label{fig:11}
 	\end{center}
 	%	\setlength{\abovecaptionskip}{-0.5 cm}
 \end{figure}
+Figure \ref{fig:10} presents the same case as Figure \ref{fig:7}, but now includes the results of the eigenproblem. When $\mathcal{I} = 0$ (rigid case), two solutions are known: one stable and the other unstable. It is therefore natural to conjecture that the upper branch is stable, while the lower branch is unstable. Figure \ref{fig:10} confirms this speculation and further reveals that along the lower branch, there exists only one positive eigenvalue (with all others being non-positive). This implies that the limit point shown in the figure corresponds to a saddle-node bifurcation. Across this bifurcation, the largest negative eigenvalue passes through zero and becomes positive.
+
+Figure \ref{fig:11} corresponds to Figure \ref{fig:8}, and likewise presents the results of the eigenproblem. Intuitively, there is only one stable branch and others are all unstable which is quite beyond the norm. Along the curve, there are three limit points, but only the rightmost one exhibits an exchange of stability and thus also represents a saddle-node bifurcation (with only one positive eigenvalue for the unstable branch passing through this limit point). For the other two limit points, there are indeed signs of eigenvalues changed (i.e., gaining or losing a positive eigenvalue), but no stability exchanges before and after these limit points.
+
+
+\subsubsection{Tensile stress}
 \begin{figure}[!h]
 	\begin{center}
 		% specify width as 80% of the width of the text on the page
@@ -820,17 +826,24 @@ Therefore, we have
 Figure \ref{fig:17} presents the six results of the tensile stress for different shape parameters when $\mathcal{I}=0$. When $\xi=0$ or $\xi=1$, $\sigma=0$, which is consistent with the fact that no force acts on the free ends. Each plot shows a jump discontinuity at the hinge point. It can be observed that the tensile stress at this point is non-zero and has opposite signs on either side, indicating a complex mechanical relationship at the hinge. The curves illustrate the tensile stress experienced by the rigid fibre under fluid forces, indicating a tendency for deformation if it were made of elastic material. 
 
 \subsubsection{Non-rotating to rotating solutions: A SNIPER bifurcation}
+Generally speaking, the motions of elastic fibres in shear flow are solely determined by their undeformed shapes. From Figure \ref{fig:26}, we have shown that the regions indicating different motions of elastic fibres varies with the different FSI parameter $\mathcal{I}$. We have investigated a lot in the steady orientation region and found some interesting things (eg. deformations and trajectory). Then we would like to consider a point in the $q-\alpha$ plot which is beyond that "steady" region, namely $\alpha>\alpha_{crt}$ ($\alpha_{crt}$ is the critical parameter which is on the boundary of the steady orientation region). As we know, with this undeformed (red point in the white region as Figure \ref{fig:24} top left ), the elastic fibre will follow a periodic rotation which is known as Jeffery orbits. Top right subplot is the time evolution corresponding to the red point in the $q-\alpha$ plot with large flow-induced deformations placed in the bottom of the Figure \ref{fig:24}. 
+
+Now, we can know that with a certain value of $q$, (1) $\alpha<\alpha_{crt}$, elastic fibres maintain fixed orientations with the steady deformations and parabolic trajectory; (2) $\alpha>\alpha_{crt}$, elastic fibres undergo a periodic rotation (Jeffery orbits) with large flow-induced deformations. It can be interpreted in this way that as $\alpha$ increases towards to $\alpha_{crt}$, the period $T$ of the Jeffery orbits tends to infinity, and we can also think that with $\alpha<\alpha_{crt}$, it actually has the infinite long period which is the steady state. This behaviour is quite similar with the property of the SNIPER (saddle node infinite periodic) bifurcation.
+
+One of the properties of the SNIPER bifurcation is that the relationship between the period $T$ and $\alpha-\alpha_{crt}$ must follow the following power law:
+
 \begin{figure}[!h]
 	\begin{center}
 		% specify width as 80% of the width of the text on the page
 		% we can also specify a width in centimetres, e.g. [width=8cm]
 		\includegraphics[width=1\textwidth]{plot/rotating_and_non_rotating/rotating.png}
-		\caption{Top left: Undeformed configuration of the elastic fibre corresponding to the red point ($q=0.3, \alpha=0.278\pi>\alpha_{crt}$) located in the white region, where the motion follows Jeffery orbits. The blue line marks the boundary of the new steady orientation region for $\mathcal{I}$. Top right: Time evolution of the instantaneous orientation $\theta(t)$ with period $T$. Bottom: Shape of the elastic fibre (actual shape, no stretching) undergoing large flow-induced deformations in shear flow.}
+		\caption{Top left: Undeformed configuration of the elastic fibre corresponding to the red point ($q=0.3, \alpha=0.278\pi>\alpha_{crt}$) located in the white region, where the motion follows Jeffery orbits. The blue line marks the boundary of the new steady orientation region for $\mathcal{I}$. Top right: Time evolution of the instantaneous orientation $\theta(t)$ with period $T$. Bottom: Actual shape of the elastic fibre (without stretching), exhibiting large flow-induced deformations in shear flow. Configurations A–F represent half a period of the fibre’s deformations; the remaining half are centrosymmetric to those shown.}
 		\label{fig:24}
 	\end{center}
 	%	\setlength{\abovecaptionskip}{-0.5 cm}
 \end{figure}
 
+From the stability analysis, for the cases provided in Figure \ref{fig:10} and \ref{fig:11} their saddle points actually are all non-hyperbolic (there is at least one eigenvalue has the zero real part) which implies the type of the bifurcation should be SNIPER bifurcation.
 \begin{figure}[!h]
 	\begin{center}
 		% specify width as 80% of the width of the text on the page
